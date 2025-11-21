@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Ans1lStickers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #27ae60;
+            --light-green: #a3d9a5;
+            --dark-green: #1e7d4e;
+            --accent-orange: #e67e22;
+            --accent-brown: #8b5a2b;
+            --accent-cream: #f7f3e9;
+            --white: #FFFFFF;
+            --gray: #6B7280;
+            --light-gray: #f5f7f6;
+            --dark: #2c3e50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-gray);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles - Mobile First */
+        header {
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        
+        .logo-text {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            cursor: pointer;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+        
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-green);
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .language-switch {
+            display: flex;
+            gap: 8px;
+            border: 1px solid #e5e7eb;
+            border-radius: 20px;
+            padding: 4px;
+            background: var(--white);
+        }
+        
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--gray);
+            padding: 6px 12px;
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+        
+        .lang-btn.active {
+            background: var(--primary-green);
+            color: var(--white);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 150px 0 80px;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%);
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--white);
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Content Section */
+        .content {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2rem;
+            font-weight: 700;
+            position: relative;
+            color: var(--dark-green);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-green), var(--light-green));
+            border-radius: 2px;
+        }
+        
+        .content-section {
+            margin-bottom: 50px;
+        }
+        
+        .content-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-green);
+            border-bottom: 2px solid var(--light-green);
+            padding-bottom: 10px;
+        }
+        
+        .content-section p {
+            margin-bottom: 15px;
+            color: var(--gray);
+        }
+        
+        .content-section ul, .content-section ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+        
+        .content-section li {
+            margin-bottom: 10px;
+        }
+        
+        .highlight-box {
+            background: var(--light-gray);
+            border-left: 4px solid var(--primary-green);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .highlight-box h3 {
+            color: var(--dark-green);
+            margin-bottom: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 60px 0 30px;
+            background: var(--dark-green);
+            color: var(--white);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .footer-logo {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            color: var(--white);
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .contact-link {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .contact-link:hover {
+            color: var(--light-green);
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            color: var(--light-green);
+            font-size: 0.8rem;
+            text-align: center;
+        }
+        
+        .copyright span {
+            color: var(--light-green);
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background: var(--white);
+            z-index: 2000;
+            transition: left 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            padding: 80px 25px 25px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .mobile-menu.active {
+            left: 0;
+        }
+        
+        .mobile-menu-close {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: var(--dark);
+            cursor: pointer;
+            transition: color 0.3s;
+            z-index: 1;
+        }
+        
+        .mobile-menu-links {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .mobile-menu-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            transition: color 0.3s;
+        }
+        
+        .mobile-menu-links a:hover {
+            color: var(--primary-green);
+        }
+        
+        .mobile-language-switch {
+            display: flex;
+            gap: 10px;
+            margin-top: 40px;
+            justify-content: center;
+        }
+        
+        .mobile-lang-btn {
+            background: transparent;
+            border: 1px solid var(--primary-green);
+            color: var(--dark);
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+        
+        .mobile-lang-btn.active {
+            background: var(--primary-green);
+            color: var(--white);
+        }
+        
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .hero {
+                padding: 180px 0 100px;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+                margin-bottom: 60px;
+            }
+            
+            .content {
+                padding: 100px 0;
+            }
+            
+            .mobile-menu {
+                width: 300px;
+                left: -300px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .nav-links, .language-switch {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="https://ans1lbbb.github.io/stickers/index.html" class="logo">
+                    <div class="logo-text">Ans1lStickers</div>
+                </a>
+                <nav class="nav-links">
+                    <a href="https://ans1lbbb.github.io/stickers/index.html" class="en">Official Website</a>
+                    <a href="https://ans1lbbb.github.io/stickers/index.html" class="zh-tw" style="display: none;">官網</a>
+                    <a href="https://ans1lbbb.github.io/stickers/index.html" class="zh-cn" style="display: none;">官网</a>
+                    <a href="#privacy-policy" class="en">Privacy Policy</a>
+                    <a href="#privacy-policy" class="zh-tw" style="display: none;">隱私政策</a>
+                    <a href="#privacy-policy" class="zh-cn" style="display: none;">隐私政策</a>
+                </nav>
+                <div class="language-switch">
+                    <button class="lang-btn active" id="en-btn">EN</button>
+                    <button class="lang-btn" id="zh-tw-btn">繁中</button>
+                    <button class="lang-btn" id="zh-cn-btn">简中</button>
+                </div>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu-close" id="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="mobile-menu-links">
+            <a href="https://ans1lbbb.github.io/stickers/index.html" class="en">Official Website</a>
+            <a href="https://ans1lbbb.github.io/stickers/index.html" class="zh-tw" style="display: none;">官網</a>
+            <a href="https://ans1lbbb.github.io/stickers/index.html" class="zh-cn" style="display: none;">官网</a>
+            <a href="#privacy-policy" class="en">Privacy Policy</a>
+            <a href="#privacy-policy" class="zh-tw" style="display: none;">隱私政策</a>
+            <a href="#privacy-policy" class="zh-cn" style="display: none;">隐私政策</a>
+        </div>
+        <div class="mobile-language-switch">
+            <button class="mobile-lang-btn active" id="mobile-en-btn">EN</button>
+            <button class="mobile-lang-btn" id="mobile-zh-tw-btn">繁中</button>
+            <button class="mobile-lang-btn" id="mobile-zh-cn-btn">简中</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="en">Privacy Policy</h1>
+                <h1 class="zh-tw" style="display: none;">隱私政策</h1>
+                <h1 class="zh-cn" style="display: none;">隐私政策</h1>
+                <p class="en">Our commitment to protecting your personal information and data privacy.</p>
+                <p class="zh-tw" style="display: none;">我們致力於保護您的個人信息和數據隱私。</p>
+                <p class="zh-cn" style="display: none;">我们致力于保护您的个人信息和数据隐私。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content" id="privacy-policy">
+        <div class="container">
+            <div class="content-section">
+                <h2 class="en">Introduction</h2>
+                <h2 class="zh-tw" style="display: none;">簡介</h2>
+                <h2 class="zh-cn" style="display: none;">简介</h2>
+                <p class="en">Ans1lStickers ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our iMessage sticker applications (collectively, the "Applications").</p>
+                <p class="zh-tw" style="display: none;">Ans1lStickers（"我們"、"我們的"或"我方"）致力於保護您的隱私。本隱私政策解釋了當您使用我們的iMessage貼圖應用程序（統稱為"應用程序"）時，我們如何收集、使用、披露和保護您的信息。</p>
+                <p class="zh-cn" style="display: none;">Ans1lStickers（"我们"、"我们的"或"我方"）致力于保护您的隐私。本隐私政策解释了当您使用我们的iMessage贴图应用程序（统称为"应用程序"）时，我们如何收集、使用、披露和保护您的信息。</p>
+                <p class="en">Please read this Privacy Policy carefully. By using our Applications, you consent to the data practices described in this policy.</p>
+                <p class="zh-tw" style="display: none;">請仔細閱讀本隱私政策。使用我們的應用程序即表示您同意本政策中描述的數據實踐。</p>
+                <p class="zh-cn" style="display: none;">请仔细阅读本隐私政策。使用我们的应用程序即表示您同意本政策中描述的数据实践。</p>
+            </div>
+            
+            <div class="content-section">
+                <h2 class="en">Information We Collect</h2>
+                <h2 class="zh-tw" style="display: none;">我們收集的信息</h2>
+                <h2 class="zh-cn" style="display: none;">我们收集的信息</h2>
+                
+                <h3 class="en">Personal Information</h3>
+                <h3 class="zh-tw" style="display: none;">個人信息</h3>
+                <h3 class="zh-cn" style="display: none;">个人信息</h3>
+                <p class="en">We do not directly collect any personally identifiable information ("Personal Information") through our iMessage sticker applications. However, please note that:</p>
+                <p class="zh-tw" style="display: none;">我們不會通過我們的iMessage貼圖應用程序直接收集任何個人身份信息（"個人信息"）。但請注意：</p>
+                <p class="zh-cn" style="display: none;">我们不会通过我们的iMessage贴图应用程序直接收集任何个人身份信息（"个人信息"）。但请注意：</p>
+                <ul class="en">
+                    <li>When you download our Applications through the App Store, Apple may collect certain information as described in their Privacy Policy</li>
+                    <li>Our Applications do not require user accounts or registration</li>
+                    <li>We do not collect names, email addresses, phone numbers, or other contact information</li>
+                </ul>
+                <ul class="zh-tw" style="display: none;">
+                    <li>當您通過App Store下載我們的應用程序時，Apple可能會收集某些信息，如其隱私政策所述</li>
+                    <li>我們的應用程序不需要用戶帳戶或註冊</li>
+                    <li>我們不收集姓名、電子郵件地址、電話號碼或其他聯繫信息</li>
+                </ul>
+                <ul class="zh-cn" style="display: none;">
+                    <li>当您通过App Store下载我们的应用程序时，Apple可能会收集某些信息，如其隐私政策所述</li>
+                    <li>我们的应用程序不需要用户帐户或注册</li>
+                    <li>我们不收集姓名、电子邮件地址、电话号码或其他联系信息</li>
+                </ul>
+                
+                <h3 class="en">Non-Personal Information</h3>
+                <h3 class="zh-tw" style="display: none;">非個人信息</h3>
+                <h3 class="zh-cn" style="display: none;">非个人信息</h3>
+                <p class="en">We may collect non-personal information that does not directly identify you. This may include:</p>
+                <p class="zh-tw" style="display: none;">我們可能會收集不直接識別您身份的非個人信息。這可能包括：</p>
+                <p class="zh-cn" style="display: none;">我们可能会收集不直接识别您身份的非个人信息。这可能包括：</p>
+                <ul class="en">
+                    <li>Device information (model, operating system version)</li>
+                    <li>Application usage data (which stickers are used most frequently)</li>
+                    <li>Crash reports and performance data</li>
+                </ul>
+                <ul class="zh-tw" style="display: none;">
+                    <li>設備信息（型號、操作系統版本）</li>
+                    <li>應用程序使用數據（哪些貼圖最常使用）</li>
+                    <li>崩潰報告和性能數據</li>
+                </ul>
+                <ul class="zh-cn" style="display: none;">
+                    <li>设备信息（型号、操作系统版本）</li>
+                    <li>应用程序使用数据（哪些贴图最常使用）</li>
+                    <li>崩溃报告和性能数据</li>
+                </ul>
+            </div>
+            
+            <div class="content-section">
+                <h2 class="en">How We Use Your Information</h2>
+                <h2 class="zh-tw" style="display: none;">我們如何使用您的信息</h2>
+                <h2 class="zh-cn" style="display: none;">我们如何使用您的信息</h2>
+                <p class="en">We use the information we collect for various purposes, including:</p>
+                <p class="zh-tw" style="display: none;">我們將收集的信息用於多種目的，包括：</p>
+                <p class="zh-cn" style="display: none;">我们将收集的信息用于多种目的，包括：</p>
+                <ul class="en">
+                    <li>To provide, maintain, and improve our Applications</li>
+                    <li>To analyze usage patterns and optimize user experience</li>
+                    <li>To diagnose and fix technical issues</li>
+                    <li>To develop new sticker packs and features</li>
+                </ul>
+                <ul class="zh-tw" style="display: none;">
+                    <li>提供、維護和改進我們的應用程序</li>
+                    <li>分析使用模式並優化用戶體驗</li>
+                    <li>診斷和修復技術問題</li>
+                    <li>開發新的貼圖包和功能</li>
+                </ul>
+                <ul class="zh-cn" style="display: none;">
+                    <li>提供、维护和改进我们的应用程序</li>
+                    <li>分析使用模式并优化用户体验</li>
+                    <li>诊断和修复技术问题</li>
+                    <li>开发新的贴图包和功能</li>
+                </ul>
+            </div>
+            
+            <div class="content-section">
+                <h2 class="en">Data Sharing and Disclosure</h2>
+                <h2 class="zh-tw" style="display: none;">數據共享和披露</h2>
+                <h2 class="zh-cn" style="display: none;">数据共享和披露</h2>
+                <p class="en">We do not sell, trade, or otherwise transfer your information to third parties. However, we may share non-personal information in the following circumstances:</p>
+                <p class="zh-tw" style="display: none;">我們不會將您的信息出售、交易或以其他方式轉讓給第三方。但是，我們可能在以下情況下共享非個人信息：</p>
+                <p class="zh-cn" style="display: none;">我们不会将您的信息出售、交易或以其他方式转让给第三方。但是，我们可能在以下情况下共享非个人信息：</p>
+                <ul class="en">
+                    <li>With service providers who assist us in operating our Applications (e.g., analytics providers)</li>
+                    <li>When required by law or to respond to legal process</li>
+                    <li>To protect the rights, property, or safety of our users or the public</li>
+                </ul>
+                <ul class="zh-tw" style="display: none;">
+                    <li>與幫助我們運營應用程序的服務提供商（例如，分析提供商）共享</li>
+                    <li>法律要求或回應法律程序時</li>
+                    <li>為保護我們用戶或公眾的權利、財產或安全</li>
+                </ul>
+                <ul class="zh-cn" style="display: none;">
+                    <li>与帮助我们运营应用程序的服务提供商（例如，分析提供商）共享</li>
+                    <li>法律要求或响应法律程序时</li>
+                    <li>为保护我们用户或公众的权利、财产或安全</li>
+                </ul>
+            </div>
+            
+            <div class="highlight-box">
+                <h3 class="en">Data Security</h3>
+                <h3 class="zh-tw" style="display: none;">數據安全</h3>
+                <h3 class="zh-cn" style="display: none;">数据安全</h3>
+                <p class="en">We implement appropriate technical and organizational security measures designed to protect your information. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+                <p class="zh-tw" style="display: none;">我們實施適當的技術和組織安全措施，旨在保護您的信息。但是，沒有任何互聯網傳輸或電子存儲方法是100%安全的，我們無法保證絕對安全。</p>
+                <p class="zh-cn" style="display: none;">我们实施适当的技术和组织安全措施，旨在保护您的信息。但是，没有任何互联网传输或电子存储方法是100%安全的，我们无法保证绝对安全。</p>
+            </div>
+            
+            <div class="content-section">
+                <h2 class="en">Children's Privacy</h2>
+                <h2 class="zh-tw" style="display: none;">兒童隱私</h2>
+                <h2 class="zh-cn" style="display: none;">儿童隐私</h2>
+                <p class="en">Our Applications are not directed to children under the age of 13, and we do not knowingly collect Personal Information from children under 13. If we learn that we have collected Personal Information from a child under 13, we will take steps to delete such information.</p>
+                <p class="zh-tw" style="display: none;">我們的應用程序不針對13歲以下的兒童，我們不會故意收集13歲以下兒童的個人信息。如果我們得知我們收集了13歲以下兒童的個人信息，我們將採取措施刪除此類信息。</p>
+                <p class="zh-cn" style="display: none;">我们的应用程序不针对13岁以下的儿童，我们不会故意收集13岁以下儿童的个人信息。如果我们得知我们收集了13岁以下儿童的个人信息，我们将采取措施删除此类信息。</p>
+            </div>
+            
+            <div class="content-section">
+                <h2 class="en">Changes to This Privacy Policy</h2>
+                <h2 class="zh-tw" style="display: none;">隱私政策的變更</h2>
+                <h2 class="zh-cn" style="display: none;">隐私政策的变更</h2>
+                <p class="en">We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date below.</p>
+                <p class="zh-tw" style="display: none;">我們可能會不時更新本隱私政策。我們將通過在此頁面上發布新的隱私政策並更新下面的"最後更新"日期來通知您任何更改。</p>
+                <p class="zh-cn" style="display: none;">我们可能会不时更新本隐私政策。我们将通过在此页面上发布新的隐私政策并更新下面的"最后更新"日期来通知您任何更改。</p>
+                <p class="en"><strong>Last Updated:</strong> November 22, 2025</p>
+                <p class="zh-tw" style="display: none;"><strong>最後更新：</strong> 2025年11月22日</p>
+                <p class="zh-cn" style="display: none;"><strong>最后更新：</strong> 2025年11月22日</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Ans1lStickers</div>
+                
+                <div class="contact-info">
+                    <a href="#" class="contact-link" id="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        <span class="en">Contact Us</span>
+                        <span class="zh-tw" style="display: none;">聯絡我們</span>
+                        <span class="zh-cn" style="display: none;">联系我们</span>
+                    </a>
+                </div>
+                
+                <div class="copyright"><span>ⓒ</span> 2025 Ans1lStickers. All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language switching functionality
+        function switchLanguage(lang) {
+            // Update active button
+            document.getElementById('en-btn').classList.toggle('active', lang === 'en');
+            document.getElementById('zh-tw-btn').classList.toggle('active', lang === 'zh-tw');
+            document.getElementById('zh-cn-btn').classList.toggle('active', lang === 'zh-cn');
+            
+            document.getElementById('mobile-en-btn').classList.toggle('active', lang === 'en');
+            document.getElementById('mobile-zh-tw-btn').classList.toggle('active', lang === 'zh-tw');
+            document.getElementById('mobile-zh-cn-btn').classList.toggle('active', lang === 'zh-cn');
+            
+            // Show/hide language-specific elements
+            const enElements = document.querySelectorAll('.en');
+            const zhTwElements = document.querySelectorAll('.zh-tw');
+            const zhCnElements = document.querySelectorAll('.zh-cn');
+            
+            if (lang === 'en') {
+                enElements.forEach(el => el.style.display = '');
+                zhTwElements.forEach(el => el.style.display = 'none');
+                zhCnElements.forEach(el => el.style.display = 'none');
+            } else if (lang === 'zh-tw') {
+                enElements.forEach(el => el.style.display = 'none');
+                zhTwElements.forEach(el => el.style.display = '');
+                zhCnElements.forEach(el => el.style.display = 'none');
+            } else {
+                enElements.forEach(el => el.style.display = 'none');
+                zhTwElements.forEach(el => el.style.display = 'none');
+                zhCnElements.forEach(el => el.style.display = '');
+            }
+        }
+        
+        document.getElementById('en-btn').addEventListener('click', function() {
+            switchLanguage('en');
+        });
+        
+        document.getElementById('zh-tw-btn').addEventListener('click', function() {
+            switchLanguage('zh-tw');
+        });
+        
+        document.getElementById('zh-cn-btn').addEventListener('click', function() {
+            switchLanguage('zh-cn');
+        });
+        
+        document.getElementById('mobile-en-btn').addEventListener('click', function() {
+            switchLanguage('en');
+            document.getElementById('mobile-menu').classList.remove('active');
+        });
+        
+        document.getElementById('mobile-zh-tw-btn').addEventListener('click', function() {
+            switchLanguage('zh-tw');
+            document.getElementById('mobile-menu').classList.remove('active');
+        });
+        
+        document.getElementById('mobile-zh-cn-btn').addEventListener('click', function() {
+            switchLanguage('zh-cn');
+            document.getElementById('mobile-menu').classList.remove('active');
+        });
+        
+        // Contact email protection
+        document.getElementById('contact-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            const email = 'ans1l' + '@' + 'icloud.com';
+            window.location.href = 'mailto:' + email;
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+                
+                // Close mobile menu after clicking a link
+                document.getElementById('mobile-menu').classList.remove('active');
+            });
+        });
+        
+        // Mobile menu functionality
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.add('active');
+        });
+        
+        document.getElementById('mobile-menu-close').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.remove('active');
+        });
+    </script>
+</body>
+</html>
