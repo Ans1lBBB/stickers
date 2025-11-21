@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ans1lStickers | Premium iMessage Sticker Collection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #2e8b57;
+            --light-green: #a3d9a5;
+            --dark-green: #1e7d4e;
+            --accent-orange: #e67e22;
+            --accent-brown: #8b5a2b;
+            --accent-cream: #f7f3e9;
+            --white: #FFFFFF;
+            --gray: #6B7280;
+            --light-gray: #f5f7f6;
+            --dark: #2c3e50;
+            --cat-pattern: repeating-linear-gradient(
+                45deg,
+                var(--accent-brown),
+                var(--accent-brown) 8px,
+                var(--accent-cream) 8px,
+                var(--accent-cream) 16px
+            );
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-gray);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(46, 139, 87, 0.03) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(139, 90, 43, 0.03) 0%, transparent 40%),
+                url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30,30 Q50,10 70,30 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30 Z' fill='%232e8b57' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        
+        .logo-text {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
+        
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-green);
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .language-switch {
+            display: flex;
+            gap: 8px;
+            border: 1px solid #e5e7eb;
+            border-radius: 20px;
+            padding: 4px;
+            background: var(--white);
+        }
+        
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--gray);
+            padding: 6px 12px;
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+        
+        .lang-btn.active {
+            background: var(--primary-green);
+            color: var(--white);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%);
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30,30 Q50,10 70,30 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30 Z' fill='%23FFFFFF' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--white);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+        
+        .hero-cat {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: var(--cat-pattern);
+            border-radius: 50%;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        .cat-1 {
+            top: 20%;
+            left: 10%;
+            animation: float 15s ease-in-out infinite;
+        }
+        
+        .cat-2 {
+            bottom: 15%;
+            right: 8%;
+            animation: float 12s ease-in-out infinite 2s;
+        }
+        
+        .cat-3 {
+            top: 60%;
+            left: 15%;
+            animation: float 18s ease-in-out infinite 1s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: var(--white);
+            position: relative;
+        }
+        
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30,30 Q50,10 70,30 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30 Z' fill='%232e8b57' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+            z-index: 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 2.5rem;
+            font-weight: 700;
+            position: relative;
+            color: var(--dark-green);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-green), var(--light-green));
+            border-radius: 2px;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: var(--primary-green);
+        }
+        
+        .about-text p {
+            color: var(--gray);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .about-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .image-placeholder {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 4rem;
+            box-shadow: 0 10px 30px rgba(46, 139, 87, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .image-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30,30 Q50,10 70,30 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30 Z' fill='%23FFFFFF' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        /* Stickers Section */
+        .stickers {
+            padding: 100px 0;
+            background: var(--light-gray);
+            position: relative;
+        }
+        
+        .stickers::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30,30 Q50,10 70,30 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30 Z' fill='%238b5a2b' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+            z-index: 0;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 60px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .sticker-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .sticker-pack {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            position: relative;
+        }
+        
+        .sticker-pack::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30,30 Q50,10 70,30 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30 Z' fill='%232e8b57' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .sticker-pack:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sticker-preview {
+            padding: 40px 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 180px;
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .sticker-preview::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30,30 Q50,10 70,30 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30 Z' fill='%23FFFFFF' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .sticker-info {
+            padding: 30px;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .sticker-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .sticker-info p {
+            color: var(--gray);
+            margin-bottom: 20px;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        
+        /* App Recommendation Section */
+        .apps {
+            padding: 100px 0;
+            background: var(--white);
+            position: relative;
+        }
+        
+        .apps::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30,30 Q50,10 70,30 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30 Z' fill='%232e8b57' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+            z-index: 0;
+        }
+        
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .app-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            position: relative;
+        }
+        
+        .app-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30,30 Q50,10 70,30 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30 Z' fill='%232e8b57' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .app-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .app-preview {
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 180px;
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .app-preview::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30,30 Q50,10 70,30 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30 Z' fill='%23FFFFFF' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .app-preview img {
+            max-width: 100%;
+            max-height: 120px;
+            object-fit: contain;
+            border-radius: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .app-info {
+            padding: 24px;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .app-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        .app-info p {
+            color: var(--gray);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .app-store-badge {
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        .app-store-badge img {
+            height: 40px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        
+        .app-store-badge:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* How to Use Section */
+        .how-to-use {
+            padding: 100px 0;
+            background: var(--light-gray);
+            position: relative;
+        }
+        
+        .how-to-use::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30,30 Q50,10 70,30 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30 Z' fill='%238b5a2b' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+            z-index: 0;
+        }
+        
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 40px 30px;
+            background: var(--white);
+            border-radius: 20px;
+            transition: transform 0.3s;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+            position: relative;
+        }
+        
+        .step::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30,30 Q50,10 70,30 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30 Z' fill='%232e8b57' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .step:hover {
+            transform: translateY(-5px);
+        }
+        
+        .step-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 24px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            font-size: 1.8rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .step h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            color: var(--dark-green);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .step p {
+            color: var(--gray);
+            position: relative;
+            z-index: 1;
+            line-height: 1.6;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 100px 0;
+            background: var(--white);
+            position: relative;
+        }
+        
+        .faq::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30,30 Q50,10 70,30 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30 Z' fill='%232e8b57' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+            z-index: 0;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            background: var(--light-gray);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--dark-green);
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+            color: var(--gray);
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 80px 0 40px;
+            background: var(--dark-green);
+            color: var(--white);
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30,30 Q50,10 70,30 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30 Z' fill='%23FFFFFF' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            z-index: 0;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer-logo {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--white);
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .contact-link {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-link:hover {
+            color: var(--light-green);
+        }
+        
+        .copyright {
+            margin-top: 40px;
+            color: var(--light-green);
+            font-size: 0.9rem;
+        }
+        
+        .copyright span {
+            color: var(--light-green);
+        }
+        
+        /* Sidebar Navigation */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -350px;
+            width: 350px;
+            height: 100vh;
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%);
+            box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
+            z-index: 2000;
+            transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            padding: 80px 25px 25px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .sidebar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30,30 Q50,10 70,30 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30 Z' fill='%23FFFFFF' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .sidebar.active {
+            right: 0;
+        }
+        
+        .sidebar-close {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--white);
+            cursor: pointer;
+            transition: color 0.3s;
+            z-index: 1;
+        }
+        
+        .sidebar-close:hover {
+            color: var(--accent-cream);
+            transform: rotate(90deg);
+        }
+        
+        .sidebar-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--white);
+            text-align: center;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        .sidebar-apps {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .sidebar-app {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            text-decoration: none;
+            color: var(--white);
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .sidebar-app:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateX(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .sidebar-app img {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .sidebar-app-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--white);
+            font-weight: 600;
+        }
+        
+        .sidebar-app-info p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .sidebar-trigger {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background: var(--primary-green);
+            color: var(--white);
+            padding: 20px 15px;
+            border-radius: 15px 0 0 15px;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: -3px 0 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .sidebar-trigger:hover {
+            padding-right: 20px;
+            background: var(--dark-green);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .nav-links {
+                gap: 20px;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .steps {
+                flex-direction: column;
+            }
+            
+            .sticker-grid, .apps-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                width: 300px;
+                right: -300px;
+            }
+            
+            .sidebar-trigger span {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .language-switch {
+                margin-top: 10px;
+            }
+            
+            .sidebar {
+                width: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <div class="logo-text">Ans1lStickers</div>
+                </a>
+                <nav class="nav-links">
+                    <a href="#about" class="en">About</a>
+                    <a href="#about" class="zh-tw" style="display: none;">關於</a>
+                    <a href="#about" class="zh-cn" style="display: none;">关于</a>
+                    <a href="#stickers" class="en">Stickers</a>
+                    <a href="#stickers" class="zh-tw" style="display: none;">貼圖</a>
+                    <a href="#stickers" class="zh-cn" style="display: none;">贴图</a>
+                    <a href="#apps" class="en">Apps</a>
+                    <a href="#apps" class="zh-tw" style="display: none;">應用</a>
+                    <a href="#apps" class="zh-cn" style="display: none;">应用</a>
+                    <a href="#faq" class="en">FAQ</a>
+                    <a href="#faq" class="zh-tw" style="display: none;">常見問題</a>
+                    <a href="#faq" class="zh-cn" style="display: none;">常见问题</a>
+                </nav>
+                <div class="language-switch">
+                    <button class="lang-btn active" id="en-btn">EN</button>
+                    <button class="lang-btn" id="zh-tw-btn">繁中</button>
+                    <button class="lang-btn" id="zh-cn-btn">简中</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-cat cat-1"></div>
+        <div class="hero-cat cat-2"></div>
+        <div class="hero-cat cat-3"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="en">Express with MeowCAT Stickers</h1>
+                <h1 class="zh-tw" style="display: none;">用MeowCAT貼圖表達自我</h1>
+                <h1 class="zh-cn" style="display: none;">用MeowCAT贴图表达自我</h1>
+                <p class="en">Discover our premium collection of iMessage stickers featuring adorable tabby cat designs for every occasion. From professional workplace expressions to casual lifestyle moments, our MeowCAT stickers bring personality and charm to your conversations.</p>
+                <p class="zh-tw" style="display: none;">探索我們優質的iMessage貼圖系列，以可愛的虎斑貓設計為特色，適用於各種場合。從專業的工作場所表達到休閒的生活方式時刻，我們的MeowCAT貼圖為您的對話增添個性與魅力。</p>
+                <p class="zh-cn" style="display: none;">探索我们优质的iMessage贴图系列，以可爱的虎斑猫设计为特色，适用于各种场合。从专业的工作场所表达到休闲的生活方式时刻，我们的MeowCAT贴图为您的对话增添个性与魅力。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title en">About MeowCAT Stickers</h2>
+            <h2 class="section-title zh-tw" style="display: none;">關於MeowCAT貼圖</h2>
+            <h2 class="section-title zh-cn" style="display: none;">关于MeowCAT贴图</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 class="en">Premium Quality iMessage Stickers</h3>
+                    <h3 class="zh-tw" style="display: none;">高品質iMessage貼圖</h3>
+                    <h3 class="zh-cn" style="display: none;">高品质iMessage贴图</h3>
+                    <p class="en">MeowCAT Stickers offers a curated collection of premium iMessage stickers designed to enhance your messaging experience. Each sticker is crafted with attention to detail, ensuring high-quality visuals that stand out in any conversation.</p>
+                    <p class="zh-tw" style="display: none;">MeowCAT貼圖提供精心挑選的高級iMessage貼圖系列，旨在提升您的信息體驗。每個貼圖都經過精心設計，注重細節，確保在任何對話中都能脫穎而出。</p>
+                    <p class="zh-cn" style="display: none;">MeowCAT贴图提供精心挑选的高级iMessage贴图系列，旨在提升您的信息体验。每个贴图都经过精心设计，注重细节，确保在任何对话中都能脱颖而出。</p>
+                    <p class="en">Our stickers feature adorable tabby cat designs in various themes, perfect for expressing emotions, sharing moments, or just having fun. Whether you're at work, enjoying life, or managing your schedule, MeowCAT Stickers has the perfect visual elements for every situation.</p>
+                    <p class="zh-tw" style="display: none;">我們的貼圖以各種主題的可愛虎斑貓設計為特色，非常適合表達情感、分享時刻或只是玩樂。無論您是在工作、享受生活還是管理日程，MeowCAT貼圖都有適合各種情況的完美視覺元素。</p>
+                    <p class="zh-cn" style="display: none;">我们的贴图以各种主题的可爱虎斑猫设计为特色，非常适合表达情感、分享时刻或只是玩乐。无论您是在工作、享受生活还是管理日程，MeowCAT贴图都有适合各种情况的完美视觉元素。</p>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-cat"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stickers Section -->
+    <section class="stickers" id="stickers">
+        <div class="container">
+            <h2 class="section-title en">Sticker Collections</h2>
+            <h2 class="section-title zh-tw" style="display: none;">貼圖系列</h2>
+            <h2 class="section-title zh-cn" style="display: none;">贴图系列</h2>
+            <p class="section-subtitle en">Browse our diverse collection of sticker packs, each designed to bring personality and style to your conversations. All stickers feature our signature tabby cat designs with a focus on expressive communication.</p>
+            <p class="section-subtitle zh-tw" style="display: none;">瀏覽我們多樣化的貼圖包系列，每個都旨在為您的對話增添個性與風格。所有貼圖均採用我們標誌性的虎斑貓設計，專注於表達性溝通。</p>
+            <p class="section-subtitle zh-cn" style="display: none;">浏览我们多样化的贴图包系列，每个都旨在为您的对话增添个性与风格。所有贴图均采用我们标志性的虎斑猫设计，专注于表达性沟通。</p>
+            
+            <div class="sticker-grid">
+                <!-- Sticker Pack 1 -->
+                <div class="sticker-pack">
+                    <div class="sticker-preview">
+                        <div class="en" style="color: var(--white); font-size: 1.5rem; text-align: center; line-height: 1.5;">
+                            Professional workplace expressions<br>
+                            Business-appropriate cat designs<br>
+                            Office-friendly communication
+                        </div>
+                        <div class="zh-tw" style="display: none; color: var(--white); font-size: 1.5rem; text-align: center; line-height: 1.5;">
+                            專業工作場所表達<br>
+                            適合商務的貓咪設計<br>
+                            辦公室友好溝通
+                        </div>
+                        <div class="zh-cn" style="display: none; color: var(--white); font-size: 1.5rem; text-align: center; line-height: 1.5;">
+                            专业工作场所表达<br>
+                            适合商务的猫咪设计<br>
+                            办公室友好沟通
+                        </div>
+                    </div>
+                    <div class="sticker-info">
+                        <h3 class="en">Office Meow</h3>
+                        <h3 class="zh-tw" style="display: none;">辦公室貓咪</h3>
+                        <h3 class="zh-cn" style="display: none;">办公室猫咪</h3>
+                        <p class="en">Professional yet playful tabby cat stickers perfect for workplace conversations. These designs maintain professionalism while adding a touch of personality to your business communications.</p>
+                        <p class="zh-tw" style="display: none;">專業又有趣的虎斑貓貼圖，非常適合工作場所對話。這些設計在保持專業性的同時，為您的商務溝通增添一抹個性。</p>
+                        <p class="zh-cn" style="display: none;">专业又有趣的虎斑猫贴图，非常适合工作场所对话。这些设计在保持专业性的同时，为您的商务沟通增添一抹个性。</p>
+                    </div>
+                </div>
+                
+                <!-- Sticker Pack 2 -->
+                <div class="sticker-pack">
+                    <div class="sticker-preview">
+                        <div class="en" style="color: var(--white); font-size: 1.5rem; text-align: center; line-height: 1.5;">
+                            Casual lifestyle moments<br>
+                            Everyday cat expressions<br>
+                            Relaxed communication style
+                        </div>
+                        <div class="zh-tw" style="display: none; color: var(--white); font-size: 1.5rem; text-align: center; line-height: 1.5;">
+                            休閒生活時刻<br>
+                            日常貓咪表達<br>
+                            輕鬆溝通風格
+                        </div>
+                        <div class="zh-cn" style="display: none; color: var(--white); font-size: 1.5rem; text-align: center; line-height: 1.5;">
+                            休闲生活时刻<br>
+                            日常猫咪表达<br>
+                            轻松沟通风格
+                        </div>
+                    </div>
+                    <div class="sticker-info">
+                        <h3 class="en">LifeStyle Cats</h3>
+                        <h3 class="zh-tw" style="display: none;">生活風格貓咪</h3>
+                        <h3 class="zh-cn" style="display: none;">生活风格猫咪</h3>
+                        <p class="en">Casual and fun tabby cat designs for everyday life and leisure activities. Perfect for sharing moments with friends and family in a lighthearted, expressive way.</p>
+                        <p class="zh-tw" style="display: none;">休閒有趣的虎斑貓設計，適用於日常生活和休閒活動。非常適合以輕鬆、富有表現力的方式與朋友和家人分享時刻。</p>
+                        <p class="zh-cn" style="display: none;">休闲有趣的虎斑猫设计，适用于日常生活和休闲活动。非常适合以轻松、富有表现力的方式与朋友和家人分享时刻。</p>
+                    </div>
+                </div>
+                
+                <!-- Sticker Pack 3 -->
+                <div class="sticker-pack">
+                    <div class="sticker-preview">
+                        <div class="en" style="color: var(--white); font-size: 1.5rem; text-align: center; line-height: 1.5;">
+                            Productivity-focused designs<br>
+                            Time management expressions<br>
+                            Work-life balance themes
+                        </div>
+                        <div class="zh-tw" style="display: none; color: var(--white); font-size: 1.5rem; text-align: center; line-height: 1.5;">
+                            專注於生產力的設計<br>
+                            時間管理表達<br>
+                            工作與生活平衡主題
+                        </div>
+                        <div class="zh-cn" style="display: none; color: var(--white); font-size: 1.5rem; text-align: center; line-height: 1.5;">
+                            专注于生产力的设计<br>
+                            时间管理表达<br>
+                            工作与生活平衡主题
+                        </div>
+                    </div>
+                    <div class="sticker-info">
+                        <h3 class="en">JobTiming Tabbies</h3>
+                        <h3 class="zh-tw" style="display: none;">工作時間貓咪</h3>
+                        <h3 class="zh-cn" style="display: none;">工作时间猫咪</h3>
+                        <p class="en">Productivity-focused tabby cat stickers for scheduling and time management. These designs help you communicate about deadlines, meetings, and work progress in a fun, engaging way.</p>
+                        <p class="zh-tw" style="display: none;">專注於生產力的虎斑貓貼圖，適用於日程安排和時間管理。這些設計以有趣、引人入勝的方式幫助您溝通截止日期、會議和工作進度。</p>
+                        <p class="zh-cn" style="display: none;">专注于生产力的虎斑猫贴图，适用于日程安排和时间管理。这些设计以有趣、引人入胜的方式帮助您沟通截止日期、会议和工作进度。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Recommendation Section -->
+    <section class="apps" id="apps">
+        <div class="container">
+            <h2 class="section-title en">Other Apps by Ans1l</h2>
+            <h2 class="section-title zh-tw" style="display: none;">Ans1l的其他應用</h2>
+            <h2 class="section-title zh-cn" style="display: none;">Ans1l的其他应用</h2>
+            <p class="section-subtitle en">Explore our collection of innovative apps designed to enhance your digital experience. Each app is crafted with the same attention to detail and quality as our sticker collections.</p>
+            <p class="section-subtitle zh-tw" style="display: none;">探索我們的創新應用系列，旨在提升您的數位體驗。每個應用都像我們的貼圖系列一樣，注重細節和品質。</p>
+            <p class="section-subtitle zh-cn" style="display: none;">探索我们的创新应用系列，旨在提升您的数字体验。每个应用都像我们的贴图系列一样，注重细节和品质。</p>
+            
+            <div class="apps-grid">
+                <!-- App 1 -->
+                <div class="app-card">
+                    <div class="app-preview">
+                        <img src="https://raw.githubusercontent.com/Ans1lBBB/AIOS/main/AIOS_icon.png" alt="AIOS Realm">
+                    </div>
+                    <div class="app-info">
+                        <h3 class="en">AIOS Realm</h3>
+                        <h3 class="zh-tw" style="display: none;">艾奧斯</h3>
+                        <h3 class="zh-cn" style="display: none;">艾奥斯</h3>
+                        <p class="en">Rebuild the memories of ocean goddesses and uncover the mysteries of ancient AIOS Sea in this captivating puzzle adventure game.</p>
+                        <p class="zh-tw" style="display: none;">在這款迷人的解謎冒險遊戲中重建海洋女神的記憶，揭開古代艾奧斯海域的神秘面紗。</p>
+                        <p class="zh-cn" style="display: none;">在这款迷人的解谜冒险游戏中重建海洋女神的记忆，揭开古代艾奥斯海域的神秘面纱。</p>
+                        <div class="app-store-badge">
+                            <a href="https://apps.apple.com/app/id6745821288" target="_blank">
+                                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- App 2 -->
+                <div class="app-card">
+                    <div class="app-preview">
+                        <img src="https://raw.githubusercontent.com/Ans1lBBB/ProfitFairy/main/ProfitFairy_icon.png" alt="ProfitFairy">
+                    </div>
+                    <div class="app-info">
+                        <h3 class="en">ProfitFairy</h3>
+                        <h3 class="zh-tw" style="display: none;">利潤精算師</h3>
+                        <h3 class="zh-cn" style="display: none;">利润精算师</h3>
+                        <p class="en">Ultimate tool for e-commerce sellers to calculate costs, prices and profit margins with precision and ease.</p>
+                        <p class="zh-tw" style="display: none;">電商賣家的終極工具，精確輕鬆地計算成本、價格和利潤率。</p>
+                        <p class="zh-cn" style="display: none;">电商卖家的终极工具，精确轻松地计算成本、价格和利润率。</p>
+                        <div class="app-store-badge">
+                            <a href="https://apps.apple.com/app/id6740332215" target="_blank">
+                                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- App 3 -->
+                <div class="app-card">
+                    <div class="app-preview">
+                        <img src="https://raw.githubusercontent.com/Ans1lBBB/RubyDays/main/RubyDays_icon.png" alt="RubyDays">
+                    </div>
+                    <div class="app-info">
+                        <h3 class="en">RubyDays</h3>
+                        <h3 class="zh-tw" style="display: none;">小主日記</h3>
+                        <h3 class="zh-cn" style="display: none;">小主日记</h3>
+                        <p class="en">Period tracking app with TCM wisdom for holistic feminine health and wellbeing, designed with care and precision.</p>
+                        <p class="zh-tw" style="display: none;">融合中醫智慧的生理期追蹤應用，促進女性整體健康，設計精心精確。</p>
+                        <p class="zh-cn" style="display: none;">融合中医智慧的生理期追踪应用，促进女性整体健康，设计精心精确。</p>
+                        <div class="app-store-badge">
+                            <a href="https://apps.apple.com/app/id6752606069" target="_blank">
+                                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use" id="how-to-use">
+        <div class="container">
+            <h2 class="section-title en">How to Use</h2>
+            <h2 class="section-title zh-tw" style="display: none;">使用說明</h2>
+            <h2 class="section-title zh-cn" style="display: none;">使用说明</h2>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">1</div>
+                    <h3 class="en">Find in App Store</h3>
+                    <h3 class="zh-tw" style="display: none;">在App Store中尋找</h3>
+                    <h3 class="zh-cn" style="display: none;">在App Store中寻找</h3>
+                    <p class="en">Search for MeowCAT stickers in the iMessage App Store on your iOS device. Our stickers are easily discoverable with clear categorization.</p>
+                    <p class="zh-tw" style="display: none;">在您的iOS設備上的iMessage App Store中搜尋MeowCAT貼圖。我們的貼圖分類清晰，易於發現。</p>
+                    <p class="zh-cn" style="display: none;">在您的iOS设备上的iMessage App Store中搜索MeowCAT贴图。我们的贴图分类清晰，易于发现。</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">2</div>
+                    <h3 class="en">Download Stickers</h3>
+                    <h3 class="zh-tw" style="display: none;">下載貼圖</h3>
+                    <h3 class="zh-cn" style="display: none;">下载贴图</h3>
+                    <p class="en">Get your favorite MeowCAT sticker packs from the iMessage App Store. All packs are free to download and use in your conversations.</p>
+                    <p class="zh-tw" style="display: none;">從iMessage App Store獲取您最喜歡的MeowCAT貼圖包。所有貼圖包均可免費下載並在對話中使用。</p>
+                    <p class="zh-cn" style="display: none;">从iMessage App Store获取您最喜欢的MeowCAT贴图包。所有贴图包均可免费下载并在对话中使用。</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">3</div>
+                    <h3 class="en">Open iMessage</h3>
+                    <h3 class="zh-tw" style="display: none;">打開iMessage</h3>
+                    <h3 class="zh-cn" style="display: none;">打开iMessage</h3>
+                    <p class="en">Launch the Messages app and start a new conversation or open an existing one. Our stickers work seamlessly across all your iMessage conversations.</p>
+                    <p class="zh-tw" style="display: none;">啟動信息應用，開始新的對話或打開現有對話。我們的貼圖可在所有iMessage對話中無縫使用。</p>
+                    <p class="zh-cn" style="display: none;">启动信息应用，开始新的对话或打开现有对话。我们的贴图可在所有iMessage对话中无缝使用。</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">4</div>
+                    <h3 class="en">Send & Enjoy</h3>
+                    <h3 class="zh-tw" style="display: none;">發送與享受</h3>
+                    <h3 class="zh-cn" style="display: none;">发送与享受</h3>
+                    <p class="en">Tap the App Store icon, select stickers, and send to enhance your conversations. Express yourself with our adorable tabby cat designs!</p>
+                    <p class="zh-tw" style="display: none;">點擊App Store圖標，選擇貼圖並發送以增強您的對話。用我們可愛的虎斑貓設計表達自己！</p>
+                    <p class="zh-cn" style="display: none;">点击App Store图标，选择贴图并发送以增强您的对话。用我们可爱的虎斑猫设计表达自己！</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title en">Frequently Asked Questions</h2>
+            <h2 class="section-title zh-tw" style="display: none;">常見問題</h2>
+            <h2 class="section-title zh-cn" style="display: none;">常见问题</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question en">
+                        How do I download and use these stickers?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-question zh-tw" style="display: none;">
+                        如何下載和使用這些貼圖？
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-question zh-cn" style="display: none;">
+                        如何下载和使用这些贴图？
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer en">
+                        You can download our sticker packs directly from the iMessage App Store. Once installed, open iMessage, tap the App Store icon next to the text field, select the sticker icon, and choose from your available sticker packs. Our stickers are compatible with all iOS and iPadOS devices with iMessage enabled.
+                    </div>
+                    <div class="faq-answer zh-tw" style="display: none;">
+                        您可以直接從iMessage App Store下載我們的貼圖包。安裝後，打開iMessage，點擊文本字段旁邊的App Store圖標，選擇貼圖圖標，然後從可用的貼圖包中選擇。我們的貼圖與所有啟用iMessage的iOS和iPadOS設備兼容。
+                    </div>
+                    <div class="faq-answer zh-cn" style="display: none;">
+                        您可以直接从iMessage App Store下载我们的贴图包。安装后，打开iMessage，点击文本字段旁边的App Store图标，选择贴图图标，然后从可用的贴图包中选择。我们的贴图与所有启用iMessage的iOS和iPadOS设备兼容。
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question en">
+                        Are new sticker packs added regularly?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-question zh-tw" style="display: none;">
+                        會定期添加新的貼圖包嗎？
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-question zh-cn" style="display: none;">
+                        会定期添加新的贴图包吗？
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer en">
+                        Yes, we regularly release new sticker packs with fresh designs and themes. Keep an eye on the iMessage App Store for updates or follow us for announcements about new releases. We're constantly working on expanding our collection to provide more variety for our users.
+                    </div>
+                    <div class="faq-answer zh-tw" style="display: none;">
+                        是的，我們會定期發布具有新設計和主題的新貼圖包。請關注iMessage App Store的更新或關注我們以獲取新發布的公告。我們不斷努力擴展我們的系列，為用戶提供更多樣化選擇。
+                    </div>
+                    <div class="faq-answer zh-cn" style="display: none;">
+                        是的，我们会定期发布具有新设计和主题的新贴图包。请关注iMessage App Store的更新或关注我们以获取新发布的公告。我们不断努力扩展我们的系列，为用户提供更多样化选择。
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question en">
+                        Do these stickers work on all Apple devices?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-question zh-tw" style="display: none;">
+                        這些貼圖適用於所有Apple設備嗎？
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-question zh-cn" style="display: none;">
+                        这些贴图适用于所有Apple设备吗？
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer en">
+                        Our stickers are compatible with iMessage on all iOS and iPadOS devices. They will appear properly on both sender and receiver devices as long as both are using Apple devices with iMessage enabled. The stickers are optimized for all screen sizes and resolutions.
+                    </div>
+                    <div class="faq-answer zh-tw" style="display: none;">
+                        我們的貼圖與所有iOS和iPadOS設備上的iMessage兼容。只要發送方和接收方都使用啟用iMessage的Apple設備，貼圖就會正確顯示。貼圖已針對所有屏幕尺寸和分辨率進行了優化。
+                    </div>
+                    <div class="faq-answer zh-cn" style="display: none;">
+                        我们的贴图与所有iOS和iPadOS设备上的iMessage兼容。只要发送方和接收方都使用启用iMessage的Apple设备，贴图就会正确显示。贴图已针对所有屏幕尺寸和分辨率进行了优化。
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question en">
+                        How can I request a specific sticker design?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-question zh-tw" style="display: none;">
+                        如何請求特定的貼圖設計？
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-question zh-cn" style="display: none;">
+                        如何请求特定的贴图设计？
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer en">
+                        We welcome suggestions for new sticker designs! Please contact us with your ideas, and we'll consider them for future sticker packs. We value our users' feedback and strive to create stickers that meet your communication needs.
+                    </div>
+                    <div class="faq-answer zh-tw" style="display: none;">
+                        我們歡迎新貼圖設計的建議！請與我們聯繫提出您的想法，我們會考慮將它們納入未來的貼圖包中。我們重視用戶的反饋，並努力創建滿足您溝通需求的貼圖。
+                    </div>
+                    <div class="faq-answer zh-cn" style="display: none;">
+                        我们欢迎新贴图设计的建议！请与我们联系提出您的想法，我们会考虑将它们纳入未来的贴图包中。我们重视用户的反馈，并努力创建满足您沟通需求的贴图。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Ans1lStickers</div>
+                
+                <div class="contact-info">
+                    <a href="#" class="contact-link" id="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        <span class="en">Contact Us</span>
+                        <span class="zh-tw" style="display: none;">聯絡我們</span>
+                        <span class="zh-cn" style="display: none;">联系我们</span>
+                    </a>
+                </div>
+                
+                <div class="copyright"><span>ⓒ</span> 2025 Ans1lStickers. All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <button class="sidebar-close" id="sidebar-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <h3 class="sidebar-title en">Our Apps</h3>
+        <h3 class="sidebar-title zh-tw" style="display: none;">我們的應用</h3>
+        <h3 class="sidebar-title zh-cn" style="display: none;">我们的应用</h3>
+        <div class="sidebar-apps">
+            <a href="https://apps.apple.com/app/id6745821288" class="sidebar-app" target="_blank">
+                <img src="https://raw.githubusercontent.com/Ans1lBBB/AIOS/main/AIOS_icon.png" alt="AIOS Realm">
+                <div class="sidebar-app-info">
+                    <h4 class="en">AIOS Realm</h4>
+                    <h4 class="zh-tw" style="display: none;">艾奧斯</h4>
+                    <h4 class="zh-cn" style="display: none;">艾奥斯</h4>
+                    <p class="en">Ocean goddess adventure</p>
+                    <p class="zh-tw" style="display: none;">海洋女神冒險</p>
+                    <p class="zh-cn" style="display: none;">海洋女神冒险</p>
+                </div>
+            </a>
+            <a href="https://apps.apple.com/app/id6740332215" class="sidebar-app" target="_blank">
+                <img src="https://raw.githubusercontent.com/Ans1lBBB/ProfitFairy/main/ProfitFairy_icon.png" alt="ProfitFairy">
+                <div class="sidebar-app-info">
+                    <h4 class="en">ProfitFairy</h4>
+                    <h4 class="zh-tw" style="display: none;">利潤精算師</h4>
+                    <h4 class="zh-cn" style="display: none;">利润精算师</h4>
+                    <p class="en">E-commerce calculator</p>
+                    <p class="zh-tw" style="display: none;">電商計算器</p>
+                    <p class="zh-cn" style="display: none;">电商计算器</p>
+                </div>
+            </a>
+            <a href="https://apps.apple.com/app/id6752606069" class="sidebar-app" target="_blank">
+                <img src="https://raw.githubusercontent.com/Ans1lBBB/RubyDays/main/RubyDays_icon.png" alt="RubyDays">
+                <div class="sidebar-app-info">
+                    <h4 class="en">RubyDays</h4>
+                    <h4 class="zh-tw" style="display: none;">小主日記</h4>
+                    <h4 class="zh-cn" style="display: none;">小主日记</h4>
+                    <p class="en">Period tracker</p>
+                    <p class="zh-tw" style="display: none;">生理期追蹤</p>
+                    <p class="zh-cn" style="display: none;">生理期追踪</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sidebar Trigger -->
+    <div class="sidebar-trigger" id="sidebar-trigger">
+        <i class="fas fa-th-large"></i>
+        <span class="en">Apps</span>
+        <span class="zh-tw" style="display: none;">應用</span>
+        <span class="zh-cn" style="display: none;">应用</span>
+    </div>
+
+    <script>
+        // Language switching functionality
+        document.getElementById('en-btn').addEventListener('click', function() {
+            switchLanguage('en');
+        });
+        
+        document.getElementById('zh-tw-btn').addEventListener('click', function() {
+            switchLanguage('zh-tw');
+        });
+        
+        document.getElementById('zh-cn-btn').addEventListener('click', function() {
+            switchLanguage('zh-cn');
+        });
+        
+        function switchLanguage(lang) {
+            // Update active button
+            document.getElementById('en-btn').classList.toggle('active', lang === 'en');
+            document.getElementById('zh-tw-btn').classList.toggle('active', lang === 'zh-tw');
+            document.getElementById('zh-cn-btn').classList.toggle('active', lang === 'zh-cn');
+            
+            // Show/hide language-specific elements
+            const enElements = document.querySelectorAll('.en');
+            const zhTwElements = document.querySelectorAll('.zh-tw');
+            const zhCnElements = document.querySelectorAll('.zh-cn');
+            
+            if (lang === 'en') {
+                enElements.forEach(el => el.style.display = '');
+                zhTwElements.forEach(el => el.style.display = 'none');
+                zhCnElements.forEach(el => el.style.display = 'none');
+            } else if (lang === 'zh-tw') {
+                enElements.forEach(el => el.style.display = 'none');
+                zhTwElements.forEach(el => el.style.display = '');
+                zhCnElements.forEach(el => el.style.display = 'none');
+            } else {
+                enElements.forEach(el => el.style.display = 'none');
+                zhTwElements.forEach(el => el.style.display = 'none');
+                zhCnElements.forEach(el => el.style.display = '');
+            }
+        }
+        
+        // Contact email protection
+        document.getElementById('contact-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            const email = 'ans1l' + '@' + 'icloud.com';
+            window.location.href = 'mailto:' + email;
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const item = this.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Sidebar functionality
+        document.getElementById('sidebar-trigger').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.add('active');
+        });
+        
+        document.getElementById('sidebar-close').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.remove('active');
+        });
+        
+        // Add subtle animation to elements on scroll
+        window.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.sticker-pack, .step, .app-card');
+            elements.forEach(el => {
+                const position = el.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (position < screenPosition) {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        
+        // Initialize elements with initial styles for animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.sticker-pack, .step, .app-card');
+            elements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            // Trigger the animation after a short delay
+            setTimeout(function() {
+                window.dispatchEvent(new Event('scroll'));
+            }, 100);
+        });
+    </script>
+</body>
+</html>
