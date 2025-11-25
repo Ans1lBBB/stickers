@@ -312,6 +312,28 @@
             font-size: 0.9rem;
         }
         
+        .sticker-subtitle {
+            color: var(--primary-green);
+            font-style: italic;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .app-store-badge {
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        .app-store-badge img {
+            height: 35px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        
+        .app-store-badge:hover img {
+            transform: scale(1.05);
+        }
+        
         /* App Recommendation Section */
         .apps {
             padding: 80px 0;
@@ -369,21 +391,6 @@
             color: var(--gray);
             margin-bottom: 15px;
             font-size: 0.9rem;
-        }
-        
-        .app-store-badge {
-            display: inline-block;
-            margin-top: 10px;
-        }
-        
-        .app-store-badge img {
-            height: 35px;
-            border-radius: 8px;
-            transition: transform 0.3s;
-        }
-        
-        .app-store-badge:hover img {
-            transform: scale(1.05);
         }
         
         /* How to Use Section */
@@ -519,6 +526,21 @@
         
         .contact-link:hover {
             color: var(--light-green);
+        }
+        
+        .privacy-link {
+            color: var(--light-green);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .privacy-link:hover {
+            color: var(--white);
+            text-decoration: underline;
         }
         
         .copyright {
@@ -935,45 +957,69 @@
                 <!-- Sticker Pack 1 -->
                 <div class="sticker-pack">
                     <div class="sticker-preview">
-                        <div style="color: var(--white); font-size: 4rem;">💼</div>
+                        <img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-1%20app%20icon.png" alt="MeowCAT: Office Paws">
                     </div>
                     <div class="sticker-info">
-                        <h3 class="en">Office Meow</h3>
-                        <h3 class="zh-tw" style="display: none;">辦公室貓咪</h3>
-                        <h3 class="zh-cn" style="display: none;">办公室猫咪</h3>
-                        <p class="en">Professional tabby cat stickers perfect for workplace conversations.</p>
-                        <p class="zh-tw" style="display: none;">專業虎斑貓貼圖，非常適合工作場所對話。</p>
-                        <p class="zh-cn" style="display: none;">专业虎斑猫贴图，非常适合工作场所对话。</p>
+                        <h3 class="en">MeowCAT: Office Paws</h3>
+                        <h3 class="zh-tw" style="display: none;">MeowCAT: 辦公室貓爪</h3>
+                        <h3 class="zh-cn" style="display: none;">MeowCAT: 办公室猫爪</h3>
+                        <p class="sticker-subtitle en">Your Daily Dose of Cuteness</p>
+                        <p class="sticker-subtitle zh-tw" style="display: none;">你的每日可愛劑量</p>
+                        <p class="sticker-subtitle zh-cn" style="display: none;">你的每日可爱剂量</p>
+                        <p class="en">Step into the everyday chaos of office life with MeowCAT – Office Series! This sticker pack captures the real struggles of every modern worker: rushing through rainy morning commutes, squeezing into crowded elevators, fighting KPI battles, and celebrating small victories. Every moment of office life becomes fun, cute, and painfully relatable with these expressive MeowCAT stickers.</p>
+                        <p class="zh-tw" style="display: none;">跟著MeowCAT – 辦公室系列，踏入日常混亂的辦公室生活！這款貼圖包捕捉了每位現代上班族的真實掙扎：冒雨趕早班通勤、擠進擁擠的電梯、為KPI奮戰、慶祝小小的勝利。有了這些表情豐富的MeowCAT貼圖，辦公室生活的每個瞬間都變得有趣、可愛且令人感同身受。</p>
+                        <p class="zh-cn" style="display: none;">跟着MeowCAT – 办公室系列，踏入日常混乱的办公室生活！这款贴图包捕捉了每位现代上班族的真实挣扎：冒雨赶早班通勤、挤进拥挤的电梯、为KPI奋战、庆祝小小的胜利。有了这些表情丰富的MeowCAT贴图，办公室生活的每个瞬间都变得有趣、可爱且令人感同身受。</p>
+                        <div class="app-store-badge">
+                            <a href="https://apps.apple.com/app/id6755613138" target="_blank">
+                                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
                 <!-- Sticker Pack 2 -->
                 <div class="sticker-pack">
                     <div class="sticker-preview">
-                        <div style="color: var(--white); font-size: 4rem;">🏠</div>
+                        <img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-2%20app%20icon.png" alt="MeowCAT-2: Corporate Meltdown">
                     </div>
                     <div class="sticker-info">
-                        <h3 class="en">LifeStyle Cats</h3>
-                        <h3 class="zh-tw" style="display: none;">生活風格貓咪</h3>
-                        <h3 class="zh-cn" style="display: none;">生活风格猫咪</h3>
-                        <p class="en">Casual tabby cat designs for everyday life and leisure activities.</p>
-                        <p class="zh-tw" style="display: none;">休閒虎斑貓設計，適用於日常生活和休閒活動。</p>
-                        <p class="zh-cn" style="display: none;">休闲虎斑猫设计，适用于日常生活和休闲活动。</p>
+                        <h3 class="en">MeowCAT-2: Corporate Meltdown</h3>
+                        <h3 class="zh-tw" style="display: none;">MeowCAT-2: 職場崩潰日記</h3>
+                        <h3 class="zh-cn" style="display: none;">MeowCAT-2: 职场崩溃日记</h3>
+                        <p class="sticker-subtitle en">Sassy & Stressed-out</p>
+                        <p class="sticker-subtitle zh-tw" style="display: none;">囂張不改，崩潰常來</p>
+                        <p class="sticker-subtitle zh-cn" style="display: none;">嚣张不改，崩溃常来</p>
+                        <p class="en">Another soul-crushing deadline looms. Your inbox is a digital hydra—for every email you slay, two more appear. Your boss's "urgent" request is the fifth today. Welcome to the corporate jungle, where the only thing more unpredictable than the stock market is your will to live. But wait! From the depths of your burning-out soul, a hero emerges. No, it's not the IT guy. It's your inner office cat—sassy, stressed-out, and armed with an attitude that could curdle milk from ten paces.</p>
+                        <p class="zh-tw" style="display: none;">又一個令人心力交瘁的截止日期迫在眉睫。你的收件箱就像數位版的九頭蛇——每處理完一封郵件，就會冒出兩封新的。老闆的「緊急」要求已經是今天的第五個了。歡迎來到企業叢林，在這裡，唯一比股市更難以預測的，就是你活下去的意志。但是請等等！從你即將燃盡的靈魂深處，一位英雄即將登場。不，不是IT部門的同事。而是你內心深處的辦公室貓魂——牠脾氣暴躁、壓力山大，並且自帶一種十步之外就能讓牛奶變酸的強大氣場。</p>
+                        <p class="zh-cn" style="display: none;">又一个令人心力交瘁的截止日期迫在眉睫。你的收件箱就像数位版的九头蛇——每处理完一封邮件，就会冒出两封新的。老板的「紧急」要求已经是今天的第五个了。欢迎来到企业丛林，在这里，唯一比股市更难以预测的，就是你活下去的意志。但是请等等！从你即将燃尽的灵魂深处，一位英雄即将登场。不，不是IT部门的同事。而是你内心深处的办公室猫魂——牠脾气暴躁、压力山大，并且自带一种十步之外就能让牛奶变酸的强大气场。</p>
+                        <div class="app-store-badge">
+                            <a href="https://apps.apple.com/app/id6755665538" target="_blank">
+                                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
                 <!-- Sticker Pack 3 -->
                 <div class="sticker-pack">
                     <div class="sticker-preview">
-                        <div style="color: var(--white); font-size: 4rem;">⏰</div>
+                        <img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-3%20app%20icon.png" alt="MeowCAT-3: Cubicle Tails">
                     </div>
                     <div class="sticker-info">
-                        <h3 class="en">JobTiming Tabbies</h3>
-                        <h3 class="zh-tw" style="display: none;">工作時間貓咪</h3>
-                        <h3 class="zh-cn" style="display: none;">工作时间猫咪</h3>
-                        <p class="en">Productivity-focused tabby cat stickers for scheduling and time management.</p>
-                        <p class="zh-tw" style="display: none;">專注於生產力的虎斑貓貼圖，適用於日程安排和時間管理。</p>
-                        <p class="zh-cn" style="display: none;">专注于生产力的虎斑猫贴图，适用于日程安排和时间管理。</p>
+                        <h3 class="en">MeowCAT-3: Cubicle Tails</h3>
+                        <h3 class="zh-tw" style="display: none;">MeowCAT-3: 隔間喵趣</h3>
+                        <h3 class="zh-cn" style="display: none;">MeowCAT-3: 隔间喵趣</h3>
+                        <p class="sticker-subtitle en">Say It with a Meow</p>
+                        <p class="sticker-subtitle zh-tw" style="display: none;">用一聲喵，說一切</p>
+                        <p class="sticker-subtitle zh-cn" style="display: none;">用一声喵，说一切</p>
+                        <p class="en">Every cubicle has its untold story. The endless meetings, the looming deadlines, the joy of a project finally done, and the silent plea for more coffee... But what if your workspace was shared with a few furry friends? Imagine a clever cat subtly rolling its eyes during a long presentation. A sleepy kitten curled up next your keyboard on a slow afternoon. An enthusiastic "paw-bump" to celebrate a team success.</p>
+                        <p class="zh-tw" style="display: none;">每個辦公隔間裡，都有說不完的故事。無盡的會議、迫在眉睫的截止日、專案完成的喜悅，以及對更多咖啡的無聲渴望...但，如果你的辦公桌旁，有一群毛茸茸的夥伴呢？想像一下：一隻聰明的貓咪在漫長的會議中偷偷翻個白眼；一個慵懶的下午，睏倦的小貓在你的鍵盤邊蜷縮成一團；或是用一個熱情的「擊掌」來慶祝團隊的成功。</p>
+                        <p class="zh-cn" style="display: none;">每个办公隔间里，都有说不完的故事。无尽的会议、迫在眉睫的截止日、专案完成的喜悦，以及对更多咖啡的无声渴望...但，如果你的办公桌旁，有一群毛茸茸的伙伴呢？想像一下：一只聪明的猫咪在漫长的会议中偷偷翻个白眼；一个慵懒的下午，困倦的小猫在你的键盘边蜷缩成一团；或是用一个热情的「击掌」来庆祝团队的成功。</p>
+                        <div class="app-store-badge">
+                            <a href="https://apps.apple.com/app/id6755676294" target="_blank">
+                                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1201,6 +1247,12 @@
                         <span class="zh-tw" style="display: none;">聯絡我們</span>
                         <span class="zh-cn" style="display: none;">联系我们</span>
                     </a>
+                    <a href="https://ans1lbbb.github.io/stickers/privacy.html" class="privacy-link" target="_blank">
+                        <i class="fas fa-shield-alt"></i>
+                        <span class="en">Privacy Policy</span>
+                        <span class="zh-tw" style="display: none;">隱私權政策</span>
+                        <span class="zh-cn" style="display: none;">隐私权政策</span>
+                    </a>
                 </div>
                 
                 <div class="copyright"><span>ⓒ</span> 2025 Ans1lStickers. All rights reserved.</div>
@@ -1213,10 +1265,43 @@
         <button class="sidebar-close" id="sidebar-close">
             <i class="fas fa-times"></i>
         </button>
-        <h3 class="sidebar-title en">Our Apps</h3>
-        <h3 class="sidebar-title zh-tw" style="display: none;">我們的應用</h3>
-        <h3 class="sidebar-title zh-cn" style="display: none;">我们的应用</h3>
+        <h3 class="sidebar-title en">Our Stickers & Apps</h3>
+        <h3 class="sidebar-title zh-tw" style="display: none;">我們的貼圖與應用</h3>
+        <h3 class="sidebar-title zh-cn" style="display: none;">我们的贴图与应用</h3>
         <div class="sidebar-apps">
+            <a href="https://apps.apple.com/app/id6755613138" class="sidebar-app" target="_blank">
+                <img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-1%20app%20icon.png" alt="MeowCAT: Office Paws">
+                <div class="sidebar-app-info">
+                    <h4 class="en">MeowCAT: Office Paws</h4>
+                    <h4 class="zh-tw" style="display: none;">MeowCAT: 辦公室貓爪</h4>
+                    <h4 class="zh-cn" style="display: none;">MeowCAT: 办公室猫爪</h4>
+                    <p class="en">Your Daily Dose of Cuteness</p>
+                    <p class="zh-tw" style="display: none;">你的每日可愛劑量</p>
+                    <p class="zh-cn" style="display: none;">你的每日可爱剂量</p>
+                </div>
+            </a>
+            <a href="https://apps.apple.com/app/id6755665538" class="sidebar-app" target="_blank">
+                <img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-2%20app%20icon.png" alt="MeowCAT-2: Corporate Meltdown">
+                <div class="sidebar-app-info">
+                    <h4 class="en">MeowCAT-2: Corporate Meltdown</h4>
+                    <h4 class="zh-tw" style="display: none;">MeowCAT-2: 職場崩潰日記</h4>
+                    <h4 class="zh-cn" style="display: none;">MeowCAT-2: 职场崩溃日记</h4>
+                    <p class="en">Sassy & Stressed-out</p>
+                    <p class="zh-tw" style="display: none;">囂張不改，崩潰常來</p>
+                    <p class="zh-cn" style="display: none;">嚣张不改，崩溃常来</p>
+                </div>
+            </a>
+            <a href="https://apps.apple.com/app/id6755676294" class="sidebar-app" target="_blank">
+                <img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-3%20app%20icon.png" alt="MeowCAT-3: Cubicle Tails">
+                <div class="sidebar-app-info">
+                    <h4 class="en">MeowCAT-3: Cubicle Tails</h4>
+                    <h4 class="zh-tw" style="display: none;">MeowCAT-3: 隔間喵趣</h4>
+                    <h4 class="zh-cn" style="display: none;">MeowCAT-3: 隔间喵趣</h4>
+                    <p class="en">Say It with a Meow</p>
+                    <p class="zh-tw" style="display: none;">用一聲喵，說一切</p>
+                    <p class="zh-cn" style="display: none;">用一声喵，说一切</p>
+                </div>
+            </a>
             <a href="https://apps.apple.com/app/id6745821288" class="sidebar-app" target="_blank">
                 <img src="https://raw.githubusercontent.com/Ans1lBBB/AIOS/main/AIOS_icon.png" alt="AIOS Realm">
                 <div class="sidebar-app-info">
