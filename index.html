@@ -295,6 +295,14 @@
             background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%);
         }
         
+        .sticker-preview img {
+            width: auto;
+            height: 120px;
+            object-fit: contain;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
         .sticker-info {
             padding: 20px;
             border-top: 1px solid rgba(0, 0, 0, 0.05);
@@ -370,10 +378,11 @@
         }
         
         .app-preview img {
-            max-width: 100%;
-            max-height: 100px;
+            width: auto;
+            height: 100px;
             object-fit: contain;
             border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
         .app-info {
@@ -637,6 +646,7 @@
             height: 70px;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
         }
         
         .sidebar-app-info h4 {
@@ -838,6 +848,10 @@
             
             .section-title {
                 font-size: 1.8rem;
+            }
+            
+            .sticker-preview img {
+                height: 100px;
             }
         }
     </style>
