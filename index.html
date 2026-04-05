@@ -2,8 +2,8 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ans1lStickers | 優質 iMessage 貼圖</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Ans1lStickers | 台客柴 · 俗擱有力 iMessage 貼圖</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -18,6 +18,9 @@
             --gray: #6B7280;
             --light-gray: #f5f7f6;
             --dark: #2c3e50;
+            --taiger-red: #d32f2f;
+            --taiger-gold: #f5b041;
+            --taiger-blue: #1f618d;
         }
         
         * {
@@ -45,7 +48,6 @@
             padding: 0 20px;
         }
         
-        /* Header Styles - Mobile First */
         header {
             padding: 15px 0;
             position: fixed;
@@ -55,20 +57,13 @@
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s;
         }
         
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
+            flex-wrap: wrap;
         }
         
         .logo-text {
@@ -98,92 +93,58 @@
             color: var(--dark);
             text-decoration: none;
             font-weight: 500;
-            font-size: 16px;
             transition: color 0.3s;
-            position: relative;
         }
         
         .nav-links a:hover {
             color: var(--primary-green);
         }
         
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary-green);
-            transition: width 0.3s;
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-        
-        .language-switch {
+        .lang-switch-wrapper {
             display: flex;
-            gap: 8px;
-            border: 1px solid #e5e7eb;
-            border-radius: 20px;
-            padding: 4px;
-            background: var(--white);
+            gap: 12px;
+            background: rgba(39, 174, 96, 0.1);
+            padding: 5px 12px;
+            border-radius: 40px;
+            border: 1px solid rgba(39,174,96,0.3);
         }
         
-        .lang-btn {
+        .global-lang-btn {
             background: transparent;
             border: none;
-            color: var(--gray);
-            padding: 6px 12px;
-            border-radius: 16px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 6px 14px;
+            border-radius: 30px;
             cursor: pointer;
-            transition: all 0.3s;
-            font-size: 14px;
+            transition: all 0.2s;
+            color: var(--dark);
         }
         
-        .lang-btn.active {
+        .global-lang-btn.active {
             background: var(--primary-green);
-            color: var(--white);
+            color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         
-        /* Hero Section */
         .hero {
             padding: 150px 0 80px;
             text-align: center;
-            position: relative;
             background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%);
-            overflow: hidden;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            margin: 0 auto;
         }
         
         .hero h1 {
             font-size: 2.5rem;
             margin-bottom: 20px;
             font-weight: 700;
-            line-height: 1.2;
             color: var(--white);
         }
         
         .hero p {
             font-size: 1.1rem;
             color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 30px;
             max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        /* About Section */
-        .about {
-            padding: 80px 0;
-            background: var(--white);
+            margin: 0 auto;
         }
         
         .section-title {
@@ -207,65 +168,6 @@
             border-radius: 2px;
         }
         
-        .about-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 40px;
-        }
-        
-        .about-text {
-            width: 100%;
-            text-align: center;
-        }
-        
-        .about-text h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            font-weight: 600;
-            color: var(--primary-green);
-        }
-        
-        .about-text p {
-            color: var(--gray);
-            margin-bottom: 20px;
-            font-size: 1rem;
-        }
-        
-        .about-image {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-        
-        .image-placeholder {
-            width: 100%;
-            max-width: 400px;
-            height: 250px;
-            background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 3rem;
-            box-shadow: 0 10px 30px rgba(46, 139, 87, 0.2);
-        }
-        
-        /* Stickers Section */
-        .stickers {
-            padding: 80px 0;
-            background: var(--light-gray);
-        }
-        
-        .section-subtitle {
-            text-align: center;
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto 50px;
-            font-size: 1rem;
-        }
-        
         .sticker-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -278,7 +180,6 @@
             overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-            border: 1px solid rgba(0, 0, 0, 0.03);
         }
         
         .sticker-pack:hover {
@@ -296,11 +197,9 @@
         }
         
         .sticker-preview img {
-            width: auto;
             height: 120px;
             object-fit: contain;
             border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
         .sticker-info {
@@ -311,7 +210,6 @@
         .sticker-info h3 {
             font-size: 1.3rem;
             margin-bottom: 10px;
-            color: var(--dark);
         }
         
         .sticker-info p {
@@ -324,7 +222,6 @@
             color: var(--primary-green);
             font-style: italic;
             margin-bottom: 15px;
-            font-size: 0.9rem;
         }
         
         .app-store-badge {
@@ -335,17 +232,36 @@
         .app-store-badge img {
             height: 35px;
             border-radius: 8px;
-            transition: transform 0.3s;
         }
         
-        .app-store-badge:hover img {
-            transform: scale(1.05);
+        .taiger-highlight {
+            border: 2px solid var(--taiger-gold);
+            background: linear-gradient(145deg, #fffaf0, #fff5e6);
+            position: relative;
+            overflow: hidden;
         }
         
-        /* App Recommendation Section */
-        .apps {
-            padding: 80px 0;
-            background: var(--white);
+        .taiger-highlight::before {
+            content: "🔥 NEW 🔥";
+            position: absolute;
+            top: 12px;
+            right: -30px;
+            background: var(--taiger-red);
+            color: gold;
+            font-size: 0.7rem;
+            font-weight: bold;
+            padding: 4px 35px;
+            transform: rotate(45deg);
+            z-index: 2;
+        }
+        
+        .taiger-preview {
+            background: linear-gradient(135deg, #f7b05e, #d4451e);
+        }
+        
+        .taiger-title {
+            color: var(--taiger-red) !important;
+            font-weight: 800;
         }
         
         .apps-grid {
@@ -358,14 +274,12 @@
             background: var(--white);
             border-radius: 20px;
             overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.3s;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-            border: 1px solid rgba(0, 0, 0, 0.03);
         }
         
         .app-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
         
         .app-preview {
@@ -378,34 +292,13 @@
         }
         
         .app-preview img {
-            width: auto;
             height: 100px;
             object-fit: contain;
             border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
         .app-info {
             padding: 20px;
-            border-top: 1px solid rgba(0, 0, 0, 0.05);
-        }
-        
-        .app-info h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--dark);
-        }
-        
-        .app-info p {
-            color: var(--gray);
-            margin-bottom: 15px;
-            font-size: 0.9rem;
-        }
-        
-        /* How to Use Section */
-        .how-to-use {
-            padding: 80px 0;
-            background: var(--light-gray);
         }
         
         .steps {
@@ -419,12 +312,6 @@
             padding: 30px 20px;
             background: var(--white);
             border-radius: 20px;
-            transition: transform 0.3s;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-        }
-        
-        .step:hover {
-            transform: translateY(-5px);
         }
         
         .step-icon {
@@ -434,27 +321,11 @@
             background: var(--primary-green);
             border-radius: 50%;
             display: flex;
-            justify-content: center;
             align-items: center;
-            color: var(--white);
+            justify-content: center;
+            color: white;
             font-size: 1.5rem;
-        }
-        
-        .step h3 {
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-            color: var(--dark-green);
-        }
-        
-        .step p {
-            color: var(--gray);
-            font-size: 0.9rem;
-        }
-        
-        /* FAQ Section */
-        .faq {
-            padding: 80px 0;
-            background: var(--white);
+            font-weight: bold;
         }
         
         .faq-container {
@@ -478,16 +349,14 @@
             align-items: center;
             font-weight: 600;
             color: var(--dark-green);
-            font-size: 0.95rem;
         }
         
         .faq-answer {
             padding: 0 15px;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s, padding 0.3s;
+            transition: max-height 0.3s;
             color: var(--gray);
-            font-size: 0.9rem;
         }
         
         .faq-item.active .faq-answer {
@@ -495,7 +364,6 @@
             max-height: 500px;
         }
         
-        /* Footer */
         footer {
             padding: 60px 0 30px;
             background: var(--dark-green);
@@ -509,13 +377,6 @@
             gap: 30px;
         }
         
-        .footer-logo {
-            font-family: 'Quicksand', sans-serif;
-            font-weight: 700;
-            font-size: 20px;
-            color: var(--white);
-        }
-        
         .contact-info {
             display: flex;
             flex-direction: column;
@@ -523,47 +384,24 @@
             align-items: center;
         }
         
-        .contact-link {
+        .contact-link, .privacy-link {
             color: var(--white);
             text-decoration: none;
-            transition: color 0.3s;
-            font-size: 1rem;
             display: flex;
             align-items: center;
             gap: 8px;
-        }
-        
-        .contact-link:hover {
-            color: var(--light-green);
         }
         
         .privacy-link {
             color: var(--light-green);
-            text-decoration: none;
-            transition: color 0.3s;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .privacy-link:hover {
-            color: var(--white);
-            text-decoration: underline;
         }
         
         .copyright {
             margin-top: 30px;
             color: var(--light-green);
             font-size: 0.8rem;
-            text-align: center;
         }
         
-        .copyright span {
-            color: var(--light-green);
-        }
-        
-        /* Sidebar Navigation */
         .sidebar {
             position: fixed;
             top: 0;
@@ -572,11 +410,9 @@
             height: 100vh;
             background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%);
             z-index: 2000;
-            transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: right 0.4s;
             padding: 80px 25px 25px;
             overflow-y: auto;
-            display: flex;
-            flex-direction: column;
         }
         
         .sidebar.active {
@@ -590,34 +426,14 @@
             background: none;
             border: none;
             font-size: 2rem;
-            color: var(--white);
+            color: white;
             cursor: pointer;
-            transition: color 0.3s;
-            z-index: 1;
-        }
-        
-        .sidebar-close:hover {
-            color: var(--accent-cream);
-            transform: rotate(90deg);
-        }
-        
-        .sidebar-title {
-            font-size: 1.8rem;
-            margin-bottom: 30px;
-            color: var(--white);
-            text-align: center;
-            font-weight: 700;
-            position: relative;
-            z-index: 1;
         }
         
         .sidebar-apps {
             display: flex;
             flex-direction: column;
             gap: 20px;
-            margin-top: 20px;
-            position: relative;
-            z-index: 1;
         }
         
         .sidebar-app {
@@ -629,36 +445,20 @@
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(10px);
             text-decoration: none;
-            color: var(--white);
+            color: white;
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
         .sidebar-app:hover {
             background: rgba(255, 255, 255, 0.25);
             transform: translateX(-10px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
         
         .sidebar-app img {
             width: 70px;
             height: 70px;
             border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             object-fit: cover;
-        }
-        
-        .sidebar-app-info h4 {
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-            color: var(--white);
-            font-weight: 600;
-        }
-        
-        .sidebar-app-info p {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.9);
         }
         
         .sidebar-trigger {
@@ -666,41 +466,29 @@
             bottom: 30px;
             right: 20px;
             background: var(--primary-green);
-            color: var(--white);
-            padding: 18px 15px;
+            color: white;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
-            cursor: pointer;
-            z-index: 100;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             font-size: 1.5rem;
-            width: 70px;
-            height: 70px;
         }
         
-        .sidebar-trigger:hover {
-            background: var(--dark-green);
-            transform: scale(1.1);
-        }
-        
-        /* Mobile Menu */
         .mobile-menu {
             position: fixed;
             top: 0;
             left: -100%;
             width: 100%;
             height: 100vh;
-            background: var(--white);
+            background: white;
             z-index: 2000;
-            transition: left 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: left 0.4s;
             padding: 80px 25px 25px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
         }
         
         .mobile-menu.active {
@@ -714,17 +502,13 @@
             background: none;
             border: none;
             font-size: 2rem;
-            color: var(--dark);
             cursor: pointer;
-            transition: color 0.3s;
-            z-index: 1;
         }
         
         .mobile-menu-links {
             display: flex;
             flex-direction: column;
             gap: 25px;
-            margin-top: 40px;
         }
         
         .mobile-menu-links a {
@@ -732,976 +516,252 @@
             text-decoration: none;
             font-weight: 600;
             font-size: 1.2rem;
-            padding: 15px 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            transition: color 0.3s;
         }
         
-        .mobile-menu-links a:hover {
-            color: var(--primary-green);
-        }
-        
-        .mobile-language-switch {
-            display: flex;
-            gap: 10px;
-            margin-top: 40px;
-            justify-content: center;
-        }
-        
-        .mobile-lang-btn {
-            background: transparent;
-            border: 1px solid var(--primary-green);
-            color: var(--dark);
-            padding: 8px 15px;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-size: 14px;
-        }
-        
-        .mobile-lang-btn.active {
-            background: var(--primary-green);
-            color: var(--white);
-        }
-        
-        /* Responsive Design */
         @media (min-width: 768px) {
-            .hero {
-                padding: 180px 0 100px;
-            }
-            
-            .hero h1 {
-                font-size: 3rem;
-            }
-            
-            .hero p {
-                font-size: 1.2rem;
-            }
-            
-            .section-title {
-                font-size: 2.5rem;
-                margin-bottom: 60px;
-            }
-            
-            .about, .stickers, .apps, .how-to-use, .faq {
-                padding: 100px 0;
-            }
-            
-            .about-content {
-                flex-direction: row;
-                text-align: left;
-            }
-            
-            .about-text {
-                text-align: left;
-            }
-            
-            .sticker-grid, .apps-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .steps {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .sidebar {
-                width: 350px;
-                right: -350px;
-            }
-            
-            .mobile-menu {
-                width: 300px;
-                left: -300px;
-            }
+            .sticker-grid, .apps-grid { grid-template-columns: repeat(2, 1fr); }
+            .steps { grid-template-columns: repeat(4, 1fr); }
+            .sidebar { width: 350px; right: -350px; }
         }
-        
         @media (min-width: 1024px) {
-            .sticker-grid, .apps-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            
-            .steps {
-                grid-template-columns: repeat(4, 1fr);
-            }
-            
-            .mobile-menu-btn {
-                display: none;
-            }
+            .sticker-grid, .apps-grid { grid-template-columns: repeat(3, 1fr); }
+            .mobile-menu-btn { display: none; }
         }
-        
         @media (max-width: 767px) {
-            .nav-links, .language-switch {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .section-title {
-                font-size: 1.8rem;
-            }
-            
-            .sticker-preview img {
-                height: 100px;
-            }
+            .nav-links, .lang-switch-wrapper { display: none; }
+            .mobile-menu-btn { display: block; }
         }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo">
-                    <div class="logo-text">Ans1lStickers</div>
-                </a>
+                <div class="logo-text">Ans1lStickers</div>
                 <nav class="nav-links">
-                    <a href="#about" class="en" style="display: none;">About</a>
-                    <a href="#about" class="zh-tw">關於</a>
-                    <a href="#about" class="zh-cn" style="display: none;">关于</a>
-                    <a href="#about" class="ja" style="display: none;">について</a>
-                    <a href="#about" class="ko" style="display: none;">소개</a>
-                    <a href="#stickers" class="en" style="display: none;">Stickers</a>
-                    <a href="#stickers" class="zh-tw">貼圖</a>
-                    <a href="#stickers" class="zh-cn" style="display: none;">贴图</a>
-                    <a href="#stickers" class="ja" style="display: none;">ステッカー</a>
-                    <a href="#stickers" class="ko" style="display: none;">스티커</a>
-                    <a href="#apps" class="en" style="display: none;">Apps</a>
-                    <a href="#apps" class="zh-tw">應用</a>
-                    <a href="#apps" class="zh-cn" style="display: none;">应用</a>
-                    <a href="#apps" class="ja" style="display: none;">アプリ</a>
-                    <a href="#apps" class="ko" style="display: none;">앱</a>
-                    <a href="#faq" class="en" style="display: none;">FAQ</a>
-                    <a href="#faq" class="zh-tw">常見問題</a>
-                    <a href="#faq" class="zh-cn" style="display: none;">常见问题</a>
-                    <a href="#faq" class="ja" style="display: none;">よくある質問</a>
-                    <a href="#faq" class="ko" style="display: none;">자주 묻는 질문</a>
+                    <a href="#stickers" data-key="nav_stickers">貼圖</a>
+                    <a href="#apps" data-key="nav_apps">應用</a>
+                    <a href="#faq" data-key="nav_faq">常見問題</a>
                 </nav>
-                <div class="language-switch">
-                    <button class="lang-btn" id="en-btn">EN</button>
-                    <button class="lang-btn active" id="zh-tw-btn">繁中</button>
-                    <button class="lang-btn" id="zh-cn-btn">简中</button>
-                    <button class="lang-btn" id="ja-btn">日本語</button>
-                    <button class="lang-btn" id="ko-btn">한국어</button>
+                <div class="lang-switch-wrapper" id="globalLangSwitch">
+                    <button class="global-lang-btn active" data-lang="zh-TW">繁中</button>
+                    <button class="global-lang-btn" data-lang="EN">EN</button>
                 </div>
-                <button class="mobile-menu-btn" id="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
+                <button class="mobile-menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
             </div>
         </div>
     </header>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
-        <button class="mobile-menu-close" id="mobile-menu-close">
-            <i class="fas fa-times"></i>
-        </button>
+        <button class="mobile-menu-close" id="mobile-menu-close"><i class="fas fa-times"></i></button>
         <div class="mobile-menu-links">
-            <a href="#about" class="en" style="display: none;">About</a>
-            <a href="#about" class="zh-tw">關於</a>
-            <a href="#about" class="zh-cn" style="display: none;">关于</a>
-            <a href="#about" class="ja" style="display: none;">について</a>
-            <a href="#about" class="ko" style="display: none;">소개</a>
-            <a href="#stickers" class="en" style="display: none;">Stickers</a>
-            <a href="#stickers" class="zh-tw">貼圖</a>
-            <a href="#stickers" class="zh-cn" style="display: none;">贴图</a>
-            <a href="#stickers" class="ja" style="display: none;">ステッカー</a>
-            <a href="#stickers" class="ko" style="display: none;">스티커</a>
-            <a href="#apps" class="en" style="display: none;">Apps</a>
-            <a href="#apps" class="zh-tw">應用</a>
-            <a href="#apps" class="zh-cn" style="display: none;">应用</a>
-            <a href="#apps" class="ja" style="display: none;">アプリ</a>
-            <a href="#apps" class="ko" style="display: none;">앱</a>
-            <a href="#faq" class="en" style="display: none;">FAQ</a>
-            <a href="#faq" class="zh-tw">常見問題</a>
-            <a href="#faq" class="zh-cn" style="display: none;">常见问题</a>
-            <a href="#faq" class="ja" style="display: none;">よくある質問</a>
-            <a href="#faq" class="ko" style="display: none;">자주 묻는 질문</a>
+            <a href="#stickers" data-key="nav_stickers">貼圖</a>
+            <a href="#apps" data-key="nav_apps">應用</a>
+            <a href="#faq" data-key="nav_faq">常見問題</a>
         </div>
-        <div class="mobile-language-switch">
-            <button class="mobile-lang-btn" id="mobile-en-btn">EN</button>
-            <button class="mobile-lang-btn active" id="mobile-zh-tw-btn">繁中</button>
-            <button class="mobile-lang-btn" id="mobile-zh-cn-btn">简中</button>
-            <button class="mobile-lang-btn" id="mobile-ja-btn">日本語</button>
-            <button class="mobile-lang-btn" id="mobile-ko-btn">한국어</button>
+        <div style="margin-top: 30px; display: flex; gap: 15px;">
+            <button class="mobile-lang-btn" data-lang="zh-TW" style="background:var(--primary-green); color:white; border:none; padding:8px 20px; border-radius:30px;">繁中</button>
+            <button class="mobile-lang-btn" data-lang="EN" style="background:transparent; border:1px solid var(--primary-green); padding:8px 20px; border-radius:30px;">EN</button>
         </div>
     </div>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="en" style="display: none;">Express with MeowCAT Stickers</h1>
-                <h1 class="zh-tw">用MeowCAT貼圖表達自我</h1>
-                <h1 class="zh-cn" style="display: none;">用MeowCAT贴图表达自我</h1>
-                <h1 class="ja" style="display: none;">MeowCATステッカーで自分を表現しよう</h1>
-                <h1 class="ko" style="display: none;">MeowCAT 스티커로 자신을 표현하세요</h1>
-                <p class="en" style="display: none;">Premium iMessage stickers featuring adorable tabby cat designs for every occasion.</p>
-                <p class="zh-tw">優質iMessage貼圖，以可愛虎斑貓設計為特色，適用於各種場合。</p>
-                <p class="zh-cn" style="display: none;">优质iMessage贴图，以可爱虎斑猫设计为特色，适用于各种场合。</p>
-                <p class="ja" style="display: none;">様々な場面に合わせた可愛らしいトラ猫デザインのプレミアムiMessageステッカー。</p>
-                <p class="ko" style="display: none;">사랑스러운 얼룩고양이 디자인의 고급 iMessage 스티커, 모든 상황에 맞게 사용하세요.</p>
+                <h1 data-key="hero_title">【台客柴】俗擱有力 · 霸氣登場</h1>
+                <p data-key="hero_desc">藍白拖＋復古安全帽＋超派口頭禪，正港台灣味貼圖，嗆翻聊天室！</p>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title en" style="display: none;">About MeowCAT Stickers</h2>
-            <h2 class="section-title zh-tw">關於MeowCAT貼圖</h2>
-            <h2 class="section-title zh-cn" style="display: none;">关于MeowCAT贴图</h2>
-            <h2 class="section-title ja" style="display: none;">MeowCATステッカーについて</h2>
-            <h2 class="section-title ko" style="display: none;">MeowCAT 스티커 소개</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3 class="en" style="display: none;">Premium Quality iMessage Stickers</h3>
-                    <h3 class="zh-tw">高品質iMessage貼圖</h3>
-                    <h3 class="zh-cn" style="display: none;">高品质iMessage贴图</h3>
-                    <h3 class="ja" style="display: none;">高品質iMessageステッカー</h3>
-                    <h3 class="ko" style="display: none;">고품질 iMessage 스티커</h3>
-                    <p class="en" style="display: none;">MeowCAT Stickers offers a curated collection of premium iMessage stickers designed to enhance your messaging experience.</p>
-                    <p class="zh-tw">MeowCAT貼圖提供精心挑選的高級iMessage貼圖系列，旨在提升您的信息體驗。</p>
-                    <p class="zh-cn" style="display: none;">MeowCAT贴图提供精心挑选的高级iMessage贴图系列，旨在提升您的信息体验。</p>
-                    <p class="ja" style="display: none;">MeowCATステッカーは、あなたのメッセージング体験を向上させるために設計された厳選されたプレミアムiMessageステッカーのコレクションを提供します。</p>
-                    <p class="ko" style="display: none;">MeowCAT 스티커는 귀하의 메시징 경험을 향상시키기 위해 설계된 엄선된 고급 iMessage 스티커 컬렉션을 제공합니다.</p>
-                    <p class="en" style="display: none;">Our stickers feature adorable tabby cat designs in various themes, perfect for expressing emotions and sharing moments.</p>
-                    <p class="zh-tw">我們的貼圖以各種主題的可愛虎斑貓設計為特色，非常適合表達情感和分享時刻。</p>
-                    <p class="zh-cn" style="display: none;">我们的贴图以各种主题的可爱虎斑猫设计为特色，非常适合表达情感和分享时刻。</p>
-                    <p class="ja" style="display: none;">私たちのステッカーは、さまざまなテーマの愛らしいトラ猫デザインを特徴としており、感情を表現したり瞬間を共有したりするのに最適です。</p>
-                    <p class="ko" style="display: none;">우리 스티커는 다양한 테마의 사랑스러운 얼룩고양이 디자인을 특징으로 하며, 감정 표현과 순간 공유에 완벽합니다.</p>
-                </div>
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-cat"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stickers Section -->
+    <!-- 貼圖系列 - 台客柴全新貼圖置於最前方 -->
     <section class="stickers" id="stickers">
         <div class="container">
-            <h2 class="section-title en" style="display: none;">Sticker Collections</h2>
-            <h2 class="section-title zh-tw">貼圖系列</h2>
-            <h2 class="section-title zh-cn" style="display: none;">贴图系列</h2>
-            <h2 class="section-title ja" style="display: none;">ステッカーコレクション</h2>
-            <h2 class="section-title ko" style="display: none;">스티커 컬렉션</h2>
-            <p class="section-subtitle en" style="display: none;">Browse our diverse collection of sticker packs, each designed to bring personality to your conversations.</p>
-            <p class="section-subtitle zh-tw">瀏覽我們多樣化的貼圖包系列，每個都旨在為您的對話增添個性。</p>
-            <p class="section-subtitle zh-cn" style="display: none;">浏览我们多样化的贴图包系列，每个都旨在为您的对话增添个性。</p>
-            <p class="section-subtitle ja" style="display: none;">多彩なステッカーパックのコレクションをご覧ください。それぞれが会話に個性をもたらすように設計されています。</p>
-            <p class="section-subtitle ko" style="display: none;">다양한 스티커 팩 컬렉션을 둘러보세요. 각각 대화에 개성을 더하도록 설계되었습니다.</p>
-            
+            <h2 class="section-title" data-key="stickers_title">🔥 全新貼圖 · 台客柴江湖篇</h2>
             <div class="sticker-grid">
-                <!-- Sticker Pack 1 -->
-                <div class="sticker-pack">
-                    <div class="sticker-preview">
-                        <img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-1%20app%20icon.png" alt="MeowCAT-1: Office Paws">
+                <!-- 台客柴 全新貼圖 (首位) -->
+                <div class="sticker-pack taiger-highlight">
+                    <div class="sticker-preview taiger-preview">
+                        <img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/9c1ac881f76060e4d02daa2987ac8adb52d07a80/shiba_web_icon.png" alt="台客柴 App Icon">
                     </div>
                     <div class="sticker-info">
-                        <h3 class="en" style="display: none;">MeowCAT-1: Office Paws</h3>
-                        <h3 class="zh-tw">MeowCAT-1: 辦公室貓爪</h3>
-                        <h3 class="zh-cn" style="display: none;">MeowCAT-1: 办公室猫爪</h3>
-                        <h3 class="ja" style="display: none;">MeowCAT-1: オフィスネコ</h3>
-                        <h3 class="ko" style="display: none;">MeowCAT-1: 사무실 고양이</h3>
-                        <p class="sticker-subtitle en" style="display: none;">Your Daily Dose of Cuteness</p>
-                        <p class="sticker-subtitle zh-tw">你的每日可愛劑量</p>
-                        <p class="sticker-subtitle zh-cn" style="display: none;">你的每日可爱剂量</p>
-                        <p class="sticker-subtitle ja" style="display: none;">あなたの毎日の可愛さの摂取量</p>
-                        <p class="sticker-subtitle ko" style="display: none;">당신의 매일 매력 복용량</p>
-                        <p class="en" style="display: none;">Step into the everyday chaos of office life with MeowCAT – Office Series! This sticker pack captures the real struggles of every modern worker: rushing through rainy morning commutes, squeezing into crowded elevators, fighting KPI battles, and celebrating small victories. Every moment of office life becomes fun, cute, and painfully relatable with these expressive MeowCAT stickers.</p>
-                        <p class="zh-tw">跟著MeowCAT – 辦公室系列，踏入日常混亂的辦公室生活！這款貼圖包捕捉了每位現代上班族的真實掙扎：冒雨趕早班通勤、擠進擁擠的電梯、為KPI奮戰、慶祝小小的勝利。有了這些表情豐富的MeowCAT貼圖，辦公室生活的每個瞬間都變得有趣、可愛且令人感同身受。</p>
-                        <p class="zh-cn" style="display: none;">跟着MeowCAT – 办公室系列，踏入日常混乱的办公室生活！这款贴图包捕捉了每位现代上班族的真实挣扎：冒雨赶早班通勤、挤进拥挤的电梯、为KPI奋战、庆祝小小的胜利。有了这些表情丰富的MeowCAT贴图，办公室生活的每个瞬间都变得有趣、可爱且令人感同身受。</p>
-                        <p class="ja" style="display: none;">MeowCAT – オフィスシリーズで、日常の混沌としたオフィスライフに足を踏み入れましょう！このステッカーパックは、現代の働く人々の本当の苦闘を捉えています：雨の朝の通勤を急ぐ、混雑したエレベーターに詰め込まれる、KPIとの戦い、小さな勝利を祝う。これらの表現豊かなMeowCATステッカーで、オフィスライフのすべての瞬間が楽しく、可愛く、痛いほど共感できるものになります。</p>
-                        <p class="ko" style="display: none;">MeowCAT – 오피스 시리즈와 함께 일상적인 혼란스러운 사무실 생활로 들어가세요! 이 스티커 팩은 모든 현대 직장인의 실제 고군분투를 포착합니다: 비오는 아침 출퇴근길 서두르기, 혼잡한 엘리베이터에 쑤셔넣기, KPI 전투, 작은 승리 축하하기. 이러한 표현력이 풍부한 MeowCAT 스티커로 사무실 생활의 모든 순간이 재미있고, 귀엽고, 고통스러울 정도로 공감 가는 것이 됩니다.</p>
+                        <h3 class="taiger-title" data-key="taiger_name">【台客柴】阿柴的江湖日常：俗擱有力篇</h3>
+                        <p class="sticker-subtitle" data-key="taiger_sub">藍白拖＋復古安全帽配上超派口頭禪，看起來很兇，其實超北爛。</p>
+                        <p data-key="taiger_desc1"><strong>聊天沒話題？那是因為你少了一隻「台客柴」！</strong><br>當阿柴穿上台味套裝，連走路都自帶風。本系列收錄江湖必備的吐槽神句與爆笑表情，專門對付已讀不回、需要被狠嗆的朋友。</p>
+                        <p data-key="taiger_desc2">從經典復古造型到台式幽默，阿柴外表狠勁十足，內心北爛無極限。快讓阿柴加入你的聊天戰場，台到沒朋友、台出新高度！</p>
+                        <p data-key="taiger_desc3"><strong>正港台式靈魂「阿柴」霸氣登場！</strong>藍白拖、復古安全帽，完美還原台灣江湖日常。超派口頭禪＋北爛眼神，俗擱有力100%，兄弟們，收圖啦！</p>
                         <div class="app-store-badge">
-                            <a href="https://apps.apple.com/app/id6755613138" target="_blank">
+                            <a href="https://apps.apple.com/app/id6761126835" target="_blank">
                                 <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
                             </a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Sticker Pack 2 -->
+                <!-- MeowCAT 三部曲 原有貼圖 -->
                 <div class="sticker-pack">
-                    <div class="sticker-preview">
-                        <img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-2%20app%20icon.png" alt="MeowCAT-2: Corporate Meltdown">
-                    </div>
-                    <div class="sticker-info">
-                        <h3 class="en" style="display: none;">MeowCAT-2: Corporate Meltdown</h3>
-                        <h3 class="zh-tw">MeowCAT-2: 職場崩潰日記</h3>
-                        <h3 class="zh-cn" style="display: none;">MeowCAT-2: 职场崩溃日记</h3>
-                        <h3 class="ja" style="display: none;">MeowCAT-2: 社畜のメンタル爆破</h3>
-                        <h3 class="ko" style="display: none;">MeowCAT-2: 회사 괴롭힘 실태</h3>
-                        <p class="sticker-subtitle en" style="display: none;">Sassy & Stressed-out</p>
-                        <p class="sticker-subtitle zh-tw">囂張不改，崩潰常來</p>
-                        <p class="sticker-subtitle zh-cn" style="display: none;">嚣张不改，崩溃常来</p>
-                        <p class="sticker-subtitle ja" style="display: none;">ツンデレ&脳筋破裂</p>
-                        <p class="sticker-subtitle ko" style="display: none;">삐졌음 스트레스 폭발함</p>
-                        <p class="en" style="display: none;">Another soul-crushing deadline looms. Your inbox is a digital hydra—for every email you slay, two more appear. Your boss's "urgent" request is the fifth today. Welcome to the corporate jungle, where the only thing more unpredictable than the stock market is your will to live. But wait! From the depths of your burning-out soul, a hero emerges. No, it's not the IT guy. It's your inner office cat—sassy, stressed-out, and armed with an attitude that could curdle milk from ten paces.</p>
-                        <p class="zh-tw">又一個令人心力交瘁的截止日期迫在眉睫。你的收件箱就像數位版的九頭蛇——每處理完一封郵件，就會冒出兩封新的。老闆的「緊急」要求已經是今天的第五個了。歡迎來到企業叢林，在這裡，唯一比股市更難以預測的，就是你活下去的意志。但是請等等！從你即將燃盡的靈魂深處，一位英雄即將登場。不，不是IT部門的同事。而是你內心深處的辦公室貓魂——牠脾氣暴躁、壓力山大，並且自帶一種十步之外就能讓牛奶變酸的強大氣場。</p>
-                        <p class="zh-cn" style="display: none;">又一个令人心力交瘁的截止日期迫在眉睫。你的收件箱就像数位版的九头蛇——每处理完一封邮件，就会冒出两封新的。老板的「紧急」要求已经是今天的第五个了。欢迎来到企业丛林，在这里，唯一比股市更难以预测的，就是你活下去的意志。但是请等等！从你即将燃尽的灵魂深处，一位英雄即将登场。不，不是IT部门的同事。而是你内心深处的办公室猫魂——牠脾气暴躁、压力山大，并且自带一种十步之外就能让牛奶变酸的强大气场。</p>
-                        <p class="ja" style="display: none;">また一つ、魂を押しつぶすような締め切りが迫っている。受信箱はデジタルハイドラのようだ——1通のメールを処理しても、さらに2通が現れる。上司の「至急」の依頼は今日5回目だし、コーヒーマシンもついに寿命だ。企業というジャングルへようこそ。ここでは、株式市場よりも予測不能なのは、あなたの生きる意志だけだ。しかし待て！燃え尽きそうな魂の奥底から、ヒーローが現れる。いいえ、IT担当のあの人ではない。あなたの内なるオフィス猫——生意気で、ストレスが溜まりまくり、十歩先からミルクを凝固させられるような強気な態度を備えている。</p>
-                        <p class="ko" style="display: none;">또 다른 영혼을 으스러뜨리는 마감 시간이 다가옵니다. 여러분의 수신함은 디지털 히드라와 같습니다——이메일 하나를 처리할 때마다 두 개의 새로운 이메일이 나타납니다. 상사의 "긴급" 요청은 오늘만 다섯 번째고, 커피 머신은 결국 수명을 다했습니다. 기업 정글에 오신 것을 환영합니다. 여기서 주식 시장보다 예측할 수 없는 유일한 것은 여러분의 생존 의지뿐입니다. 하지만 기다려 보세요! 여러분의 번아웃 직전의 영혼 깊은 곳에서 영웅이 등장합니다. 아닙니다, IT 담당자가 아닙니다. 그것은 여러분 내면의 오피스 고양이——건방지고, 스트레스 가득하며, 열 걸음 밖에서도 우를 응고시킬 수 있는 태도를 가진 영웅입니다.</p>
-                        <div class="app-store-badge">
-                            <a href="https://apps.apple.com/app/id6755665538" target="_blank">
-                                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
-                            </a>
-                        </div>
-                    </div>
+                    <div class="sticker-preview"><img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-1%20app%20icon.png" alt="MeowCAT-1"></div>
+                    <div class="sticker-info"><h3 data-key="pack1_title">MeowCAT-1: 辦公室貓爪</h3><p class="sticker-subtitle" data-key="pack1_sub">你的每日可愛劑量</p><p data-key="pack1_desc">踏入辦公室日常！冒雨通勤、KPI奮戰，每個瞬間變得可愛又共鳴。</p><div class="app-store-badge"><a href="https://apps.apple.com/app/id6755613138" target="_blank"><img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download"></a></div></div>
                 </div>
-                
-                <!-- Sticker Pack 3 -->
                 <div class="sticker-pack">
-                    <div class="sticker-preview">
-                        <img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-3%20app%20icon.png" alt="MeowCAT-3: Cubicle Tails">
-                    </div>
-                    <div class="sticker-info">
-                        <h3 class="en" style="display: none;">MeowCAT-3: Cubicle Tails</h3>
-                        <h3 class="zh-tw">MeowCAT-3: 隔間喵趣</h3>
-                        <h3 class="zh-cn" style="display: none;">MeowCAT-3: 隔间喵趣</h3>
-                        <h3 class="ja" style="display: none;">MeowCAT-3: 業務にゃん</h3>
-                        <h3 class="ko" style="display: none;">MeowCAT-3: 사무실 야옹이</h3>
-                        <p class="sticker-subtitle en" style="display: none;">Say It with a Meow</p>
-                        <p class="sticker-subtitle zh-tw">用一聲喵，說一切</p>
-                        <p class="sticker-subtitle zh-cn" style="display: none;">用一声喵，说一切</p>
-                        <p class="sticker-subtitle ja" style="display: none;">鳴き声で、伝えよう</p>
-                        <p class="sticker-subtitle ko" style="display: none;">야옹으로 전해요</p>
-                        <p class="en" style="display: none;">Every cubicle has its untold story. The endless meetings, the looming deadlines, the joy of a project finally done, and the silent plea for more coffee... But what if your workspace was shared with a few furry friends? Imagine a clever cat subtly rolling its eyes during a long presentation. A sleepy kitten curled up next your keyboard on a slow afternoon. An enthusiastic "paw-bump" to celebrate a team success.</p>
-                        <p class="zh-tw">每個辦公隔間裡，都有說不完的故事。無盡的會議、迫在眉睫的截止日、專案完成的喜悅，以及對更多咖啡的無聲渴望...但，如果你的辦公桌旁，有一群毛茸茸的夥伴呢？想像一下：一隻聰明的貓咪在漫長的會議中偷偷翻個白眼；一個慵懶的下午，睏倦的小貓在你的鍵盤邊蜷縮成一團；或是用一個熱情的「擊掌」來慶祝團隊的成功。</p>
-                        <p class="zh-cn" style="display: none;">每个办公隔间里，都有说不完的故事。无尽的会议、迫在眉睫的截止日、专案完成的喜悦，以及对更多咖啡的无声渴望...但，如果你的办公桌旁，有一群毛茸茸的伙伴呢？想像一下：一只聪明的猫咪在漫长的会议中偷偷翻个白眼；一个慵懒的下午，困倦的小猫在你的键盘边蜷缩成一团；或是用一个热情的「击掌」来庆祝团队的成功。</p>
-                        <p class="ja" style="display: none;">ひとつひとつのオフィスブースには、語られない物語があります。終わりのない会議、迫りくる締め切り、プロジェクト完了の喜び、そしてもっとコーヒーが欲しいという無言の願い...でも、もしあなたの職場に、数匹の毛茸な友達がいたらどうでしょう？長いプレゼンテーション中に、賢い猫がこっそり白目をむいている様子を想像してみてください。のんびりした午後、キーボードの横で眠たそうに丸くなる子猫。チームの成功を祝う、熱心な「肉球ハイタッチ」。</p>
-                        <p class="ko" style="display: none;">모든 사무실 칸막이에는 전하지 못한 이야기가 있습니다. 끝없는 회의, 코앞으로 다가온 마감일, 프로젝트가 마침내 끝난 기쁨, 그리고 더 많은 커피에 대한 침묵의 간청... 하지만 여러분의 작업 공간에 털복숭이 친구들이 함께 한다면 어떨까요? 긴 프레젠테이션 도중 영리한 고양이가 슬쩍 눈을 굴리는 모습을 상상해 보세요. 느릿한 오후, 키보드 옆에 졸린 고양이가 웅크리고 있는 모습. 팀의 성공을 축하하는 열정적인 "포옹 하이파이브".</p>
-                        <div class="app-store-badge">
-                            <a href="https://apps.apple.com/app/id6755676294" target="_blank">
-                                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
-                            </a>
-                        </div>
-                    </div>
+                    <div class="sticker-preview"><img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-2%20app%20icon.png" alt="MeowCAT-2"></div>
+                    <div class="sticker-info"><h3 data-key="pack2_title">MeowCAT-2: 職場崩潰日記</h3><p class="sticker-subtitle" data-key="pack2_sub">囂張不改，崩潰常來</p><p data-key="pack2_desc">收件箱九頭蛇、老闆緊急要求，辦公貓魂壓力山大超派，嗆辣態度陪你度過。</p><div class="app-store-badge"><a href="https://apps.apple.com/app/id6755665538" target="_blank"><img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download"></a></div></div>
+                </div>
+                <div class="sticker-pack">
+                    <div class="sticker-preview"><img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-3%20app%20icon.png" alt="MeowCAT-3"></div>
+                    <div class="sticker-info"><h3 data-key="pack3_title">MeowCAT-3: 隔間喵趣</h3><p class="sticker-subtitle" data-key="pack3_sub">用一聲喵，說一切</p><p data-key="pack3_desc">無限會議、鍵盤旁睏倦小貓，肉球擊掌慶祝成功，毛茸茸夥伴療癒日常。</p><div class="app-store-badge"><a href="https://apps.apple.com/app/id6755676294" target="_blank"><img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download"></a></div></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- App Recommendation Section -->
     <section class="apps" id="apps">
         <div class="container">
-            <h2 class="section-title en" style="display: none;">Other Apps by Ans1l</h2>
-            <h2 class="section-title zh-tw">Ans1l的其他應用</h2>
-            <h2 class="section-title zh-cn" style="display: none;">Ans1l的其他应用</h2>
-            <h2 class="section-title ja" style="display: none;">Ans1lの他のアプリ</h2>
-            <h2 class="section-title ko" style="display: none;">Ans1l의 다른 앱</h2>
-            <p class="section-subtitle en" style="display: none;">Explore our collection of innovative apps designed to enhance your digital experience.</p>
-            <p class="section-subtitle zh-tw">探索我們的創新應用系列，旨在提升您的數位體驗。</p>
-            <p class="section-subtitle zh-cn" style="display: none;">探索我们的创新应用系列，旨在提升您的数字体验。</p>
-            <p class="section-subtitle ja" style="display: none;">あなたのデジタル体験を向上させるために設計された革新的なアプリのコレクションを探索してください。</p>
-            <p class="section-subtitle ko" style="display: none;">디지털 경험을 향상시키기 위해 설계된 혁신적인 앱 컬렉션을 탐색하세요.</p>
-            
+            <h2 class="section-title" data-key="apps_title">Ans1l 生態系應用</h2>
             <div class="apps-grid">
-                <!-- App 1 -->
-                <div class="app-card">
-                    <div class="app-preview">
-                        <img src="https://raw.githubusercontent.com/Ans1lBBB/AIOS/main/AIOS_icon.png" alt="AIOS Realm">
-                    </div>
-                    <div class="app-info">
-                        <h3 class="en" style="display: none;">AIOS Realm</h3>
-                        <h3 class="zh-tw">艾奧斯</h3>
-                        <h3 class="zh-cn" style="display: none;">艾奥斯</h3>
-                        <h3 class="ja" style="display: none;">AIOS Realm</h3>
-                        <h3 class="ko" style="display: none;">AIOS Realm</h3>
-                        <p class="en" style="display: none;">Rebuild the memories of ocean goddesses in this captivating puzzle adventure.</p>
-                        <p class="zh-tw">在這款迷人的解謎冒險中重建海洋女神的記憶。</p>
-                        <p class="zh-cn" style="display: none;">在这款迷人的解谜冒险中重建海洋女神的记忆。</p>
-                        <p class="ja" style="display: none;">魅惑的なパズルアドベンチャーで海洋の女神たちの記憶を再構築しましょう。</p>
-                        <p class="ko" style="display: none;">매혹적인 퍼즐 어드벤처에서 바다 여신들의 기억을 재구성하세요.</p>
-                        <div class="app-store-badge">
-                            <a href="https://apps.apple.com/app/id6745821288" target="_blank">
-                                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- App 2 -->
-                <div class="app-card">
-                    <div class="app-preview">
-                        <img src="https://raw.githubusercontent.com/Ans1lBBB/ProfitFairy/main/ProfitFairy_icon.png" alt="ProfitFairy">
-                    </div>
-                    <div class="app-info">
-                        <h3 class="en" style="display: none;">ProfitFairy</h3>
-                        <h3 class="zh-tw">利潤精算師</h3>
-                        <h3 class="zh-cn" style="display: none;">利润精算师</h3>
-                        <h3 class="ja" style="display: none;">ProfitFairy</h3>
-                        <h3 class="ko" style="display: none;">ProfitFairy</h3>
-                        <p class="en" style="display: none;">Ultimate tool for e-commerce sellers to calculate costs and profit margins.</p>
-                        <p class="zh-tw">電商賣家的終極工具，計算成本和利潤率。</p>
-                        <p class="zh-cn" style="display: none;">电商卖家的终极工具，计算成本和利润率。</p>
-                        <p class="ja" style="display: none;">Eコマース販売者がコストと利益率を計算するための究極のツール。</p>
-                        <p class="ko" style="display: none;">전자상거래 판매자가 비용과 이익률을 계산하는 최고의 도구입니다.</p>
-                        <div class="app-store-badge">
-                            <a href="https://apps.apple.com/app/id6740332215" target="_blank">
-                                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- App 3 -->
-                <div class="app-card">
-                    <div class="app-preview">
-                        <img src="https://raw.githubusercontent.com/Ans1lBBB/RubyDays/main/RubyDays_icon.png" alt="RubyDays">
-                    </div>
-                    <div class="app-info">
-                        <h3 class="en" style="display: none;">RubyDays</h3>
-                        <h3 class="zh-tw">小主日記</h3>
-                        <h3 class="zh-cn" style="display: none;">小主日记</h3>
-                        <h3 class="ja" style="display: none;">RubyDays</h3>
-                        <h3 class="ko" style="display: none;">RubyDays</h3>
-                        <p class="en" style="display: none;">Period tracking app with TCM wisdom for holistic feminine health.</p>
-                        <p class="zh-tw">融合中醫智慧的生理期追蹤應用，促進女性整體健康。</p>
-                        <p class="zh-cn" style="display: none;">融合中医智慧的生理期追踪应用，促进女性整体健康。</p>
-                        <p class="ja" style="display: none;">中医学の知恵を取り入れた生理周期トラッキングアプリで、女性の全体的な健康を促進します。</p>
-                        <p class="ko" style="display: none;">중의학 지혜를 결합한 생리 주기 추적 앱으로 여성의 전체적인 건강을 촉진합니다.</p>
-                        <div class="app-store-badge">
-                            <a href="https://apps.apple.com/app/id6752606069" target="_blank">
-                                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <div class="app-card"><div class="app-preview"><img src="https://raw.githubusercontent.com/Ans1lBBB/AIOS/main/AIOS_icon.png"></div><div class="app-info"><h3 data-key="aios_name">艾奧斯</h3><p data-key="aios_desc">海洋女神解謎冒險，重建記憶碎片。</p><div class="app-store-badge"><a href="https://apps.apple.com/app/id6745821288" target="_blank"><img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"></a></div></div></div>
+                <div class="app-card"><div class="app-preview"><img src="https://raw.githubusercontent.com/Ans1lBBB/ProfitFairy/main/ProfitFairy_icon.png"></div><div class="app-info"><h3 data-key="profit_name">利潤精算師</h3><p data-key="profit_desc">電商成本利潤計算神器。</p><div class="app-store-badge"><a href="https://apps.apple.com/app/id6740332215" target="_blank"><img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"></a></div></div></div>
+                <div class="app-card"><div class="app-preview"><img src="https://raw.githubusercontent.com/Ans1lBBB/RubyDays/main/RubyDays_icon.png"></div><div class="app-info"><h3 data-key="ruby_name">小主日記</h3><p data-key="ruby_desc">中醫智慧生理期追蹤，呵護女性。</p><div class="app-store-badge"><a href="https://apps.apple.com/app/id6752606069" target="_blank"><img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"></a></div></div></div>
             </div>
         </div>
     </section>
 
-    <!-- How to Use Section -->
     <section class="how-to-use" id="how-to-use">
         <div class="container">
-            <h2 class="section-title en" style="display: none;">How to Use</h2>
-            <h2 class="section-title zh-tw">使用說明</h2>
-            <h2 class="section-title zh-cn" style="display: none;">使用说明</h2>
-            <h2 class="section-title ja" style="display: none;">使い方</h2>
-            <h2 class="section-title ko" style="display: none;">사용 방법</h2>
-            
+            <h2 class="section-title" data-key="how_title">使用說明</h2>
             <div class="steps">
-                <div class="step">
-                    <div class="step-icon">1</div>
-                    <h3 class="en" style="display: none;">Find in App Store</h3>
-                    <h3 class="zh-tw">在App Store中尋找</h3>
-                    <h3 class="zh-cn" style="display: none;">在App Store中寻找</h3>
-                    <h3 class="ja" style="display: none;">App Storeで探す</h3>
-                    <h3 class="ko" style="display: none;">App Store에서 찾기</h3>
-                    <p class="en" style="display: none;">Search for MeowCAT stickers in the iMessage App Store.</p>
-                    <p class="zh-tw">在iMessage App Store中搜尋MeowCAT貼圖。</p>
-                    <p class="zh-cn" style="display: none;">在iMessage App Store中搜索MeowCAT贴图。</p>
-                    <p class="ja" style="display: none;">iMessage App StoreでMeowCATステッカーを検索します。</p>
-                    <p class="ko" style="display: none;">iMessage App Store에서 MeowCAT 스티커를 검색하세요.</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-icon">2</div>
-                    <h3 class="en" style="display: none;">Download Stickers</h3>
-                    <h3 class="zh-tw">下載貼圖</h3>
-                    <h3 class="zh-cn" style="display: none;">下载贴图</h3>
-                    <h3 class="ja" style="display: none;">ステッカーをダウンロード</h3>
-                    <h3 class="ko" style="display: none;">스티커 다운로드</h3>
-                    <p class="en" style="display: none;">Get your favorite MeowCAT sticker packs.</p>
-                    <p class="zh-tw">獲取您最喜歡的MeowCAT貼圖包。</p>
-                    <p class="zh-cn" style="display: none;">获取您最喜欢的MeowCAT贴图包。</p>
-                    <p class="ja" style="display: none;">お気に入りのMeowCATステッカーパックを入手します。</p>
-                    <p class="ko" style="display: none;">가장 좋아하는 MeowCAT 스티커 팩을 받으세요.</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-icon">3</div>
-                    <h3 class="en" style="display: none;">Open iMessage</h3>
-                    <h3 class="zh-tw">打開iMessage</h3>
-                    <h3 class="zh-cn" style="display: none;">打开iMessage</h3>
-                    <h3 class="ja" style="display: none;">iMessageを開く</h3>
-                    <h3 class="ko" style="display: none;">iMessage 열기</h3>
-                    <p class="en" style="display: none;">Launch Messages and start a conversation.</p>
-                    <p class="zh-tw">啟動信息並開始對話。</p>
-                    <p class="zh-cn" style="display: none;">启动信息并开始对话。</p>
-                    <p class="ja" style="display: none;">メッセージを起動して会話を開始します。</p>
-                    <p class="ko" style="display: none;">메시지를 실행하고 대화를 시작하세요.</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-icon">4</div>
-                    <h3 class="en" style="display: none;">Send & Enjoy</h3>
-                    <h3 class="zh-tw">發送與享受</h3>
-                    <h3 class="zh-cn" style="display: none;">发送与享受</h3>
-                    <h3 class="ja" style="display: none;">送信して楽しむ</h3>
-                    <h3 class="ko" style="display: none;">전송 및 즐기기</h3>
-                    <p class="en" style="display: none;">Tap the App Store icon and select stickers to send.</p>
-                    <p class="zh-tw">點擊App Store圖標並選擇貼圖發送。</p>
-                    <p class="zh-cn" style="display: none;">点击App Store图标并选择贴图发送。</p>
-                    <p class="ja" style="display: none;">App Storeアイコンをタップして、送信するステッカーを選択します。</p>
-                    <p class="ko" style="display: none;">App Store 아이콘을 탭하고 전송할 스티커를 선택하세요.</p>
-                </div>
+                <div class="step"><div class="step-icon">1</div><h3 data-key="step1_title">在App Store中尋找</h3><p data-key="step1_desc">搜尋「台客柴」或「MeowCAT」</p></div>
+                <div class="step"><div class="step-icon">2</div><h3 data-key="step2_title">下載貼圖包</h3><p data-key="step2_desc">點擊取得並安裝至iMessage</p></div>
+                <div class="step"><div class="step-icon">3</div><h3 data-key="step3_title">打開iMessage</h3><p data-key="step3_desc">啟動訊息，選擇對話</p></div>
+                <div class="step"><div class="step-icon">4</div><h3 data-key="step4_title">傳送與享受</h3><p data-key="step4_desc">點擊App Store圖示，選取貼圖發送</p></div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
     <section class="faq" id="faq">
         <div class="container">
-            <h2 class="section-title en" style="display: none;">Frequently Asked Questions</h2>
-            <h2 class="section-title zh-tw">常見問題</h2>
-            <h2 class="section-title zh-cn" style="display: none;">常见问题</h2>
-            <h2 class="section-title ja" style="display: none;">よくある質問</h2>
-            <h2 class="section-title ko" style="display: none;">자주 묻는 질문</h2>
-            
+            <h2 class="section-title" data-key="faq_title">常見問題</h2>
             <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question en" style="display: none;">
-                        How do I download and use these stickers?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-question zh-tw">
-                        如何下載和使用這些貼圖？
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-question zh-cn" style="display: none;">
-                        如何下载和使用这些贴图？
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-question ja" style="display: none;">
-                        これらのステッカーをどのようにダウンロードして使用しますか？
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-question ko" style="display: none;">
-                        이 스티커를 어떻게 다운로드하고 사용하나요?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer en" style="display: none;">
-                        You can download our sticker packs directly from the iMessage App Store. Once installed, open iMessage, tap the App Store icon next to the text field, select the sticker icon, and choose from your available sticker packs.
-                    </div>
-                    <div class="faq-answer zh-tw">
-                        您可以直接從iMessage App Store下載我們的貼圖包。安裝後，打開iMessage，點擊文本字段旁邊的App Store圖標，選擇貼圖圖標，然後從可用的貼圖包中選擇。
-                    </div>
-                    <div class="faq-answer zh-cn" style="display: none;">
-                        您可以直接从iMessage App Store下载我们的贴图包。安装后，打开iMessage，点击文本字段旁边的App Store图标，选择贴图图标，然后从可用的贴图包中选择。
-                    </div>
-                    <div class="faq-answer ja" style="display: none;">
-                        ステッカーパックはiMessage App Storeから直接ダウンロードできます。インストール後、iMessageを開き、テキストフィールドの横にあるApp Storeアイコンをタップし、ステッカーアイコンを選択して、利用可能なステッカーパックから選択します。
-                    </div>
-                    <div class="faq-answer ko" style="display: none;">
-                        스티커 팩은 iMessage App Store에서 직접 다운로드할 수 있습니다. 설치 후, iMessage를 열고 텍스트 필드 옆에 있는 App Store 아이콘을 탭한 다음 스티커 아이콘을 선택하고 사용 가능한 스티커 팩 중에서 선택하세요.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question en" style="display: none;">
-                        Are new sticker packs added regularly?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-question zh-tw">
-                        會定期添加新的貼圖包嗎？
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-question zh-cn" style="display: none;">
-                        会定期添加新的贴图包吗？
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-question ja" style="display: none;">
-                        新しいステッカーパックは定期的に追加されますか？
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-question ko" style="display: none;">
-                        새로운 스티커 팩이 정기적으로 추가되나요?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer en" style="display: none;">
-                        Yes, we regularly release new sticker packs with fresh designs and themes. Keep an eye on the iMessage App Store for updates.
-                    </div>
-                    <div class="faq-answer zh-tw">
-                        是的，我們會定期發布具有新設計和主題的新貼圖包。請關注iMessage App Store的更新。
-                    </div>
-                    <div class="faq-answer zh-cn" style="display: none;">
-                        是的，我们会定期发布具有新设计和主题的新贴图包。请关注iMessage App Store的更新。
-                    </div>
-                    <div class="faq-answer ja" style="display: none;">
-                        はい、新しいデザインとテーマの新しいステッカーパックを定期的にリリースしています。iMessage App Storeの更新にご注目ください。
-                    </div>
-                    <div class="faq-answer ko" style="display: none;">
-                        예, 새로운 디자인과 테마를 가진 새로운 스티커 팩을 정기적으로 출시합니다. iMessage App Store의 업데이트를 주시하세요.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question en" style="display: none;">
-                        Do these stickers work on all Apple devices?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-question zh-tw">
-                        這些貼圖適用於所有Apple設備嗎？
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-question zh-cn" style="display: none;">
-                        这些贴图适用于所有Apple设备吗？
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-question ja" style="display: none;">
-                        これらのステッカーはすべてのAppleデバイスで動作しますか？
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-question ko" style="display: none;">
-                        이 스티커는 모든 Apple 기기에서 작동하나요?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer en" style="display: none;">
-                        Our stickers are compatible with iMessage on all iOS and iPadOS devices. They will appear properly on both sender and receiver devices.
-                    </div>
-                    <div class="faq-answer zh-tw">
-                        我們的貼圖與所有iOS和iPadOS設備上的iMessage兼容。貼圖會在發送方和接收方設備上正確顯示。
-                    </div>
-                    <div class="faq-answer zh-cn" style="display: none;">
-                        我们的贴图与所有iOS和iPadOS设备上的iMessage兼容。贴图会在发送方和接收方设备上正确显示。
-                    </div>
-                    <div class="faq-answer ja" style="display: none;">
-                        私たちのステッカーは、すべてのiOSおよびiPadOSデバイスのiMessageと互換性があります。ステッカーは送信側と受信側の両方のデバイスで正しく表示されます。
-                    </div>
-                    <div class="faq-answer ko" style="display: none;">
-                        저희 스티커는 모든 iOS 및 iPadOS 기기의 iMessage와 호환됩니다. 스티커는 발신자와 수신자 기기 모두에서 올바르게 표시됩니다.
-                    </div>
-                </div>
+                <div class="faq-item"><div class="faq-question" data-key="faq1_q">台客柴跟MeowCAT有什麼不同？<i class="fas fa-chevron-down"></i></div><div class="faq-answer" data-key="faq1_a">台客柴是全新獨立系列！以台灣在地江湖味、藍白拖、超派口頭禪為主，風格更嗆更北爛，和MeowCAT上班族療癒風完全不同。</div></div>
+                <div class="faq-item"><div class="faq-question" data-key="faq2_q">哪裡下載台客柴貼圖？<i class="fas fa-chevron-down"></i></div><div class="faq-answer" data-key="faq2_a">點擊上方「台客柴」卡片中的App Store按鈕即可下載，或直接前往 https://apps.apple.com/app/id6761126835</div></div>
+                <div class="faq-item"><div class="faq-question" data-key="faq3_q">貼圖支援哪些裝置？<i class="fas fa-chevron-down"></i></div><div class="faq-answer" data-key="faq3_a">所有iOS / iPadOS裝置，iMessage相容，發送與接收端皆正常顯示。</div></div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">Ans1lStickers</div>
-                
                 <div class="contact-info">
-                    <a href="#" class="contact-link" id="contact-link">
-                        <i class="fas fa-envelope"></i>
-                        <span class="en" style="display: none;">Contact Us</span>
-                        <span class="zh-tw">聯絡我們</span>
-                        <span class="zh-cn" style="display: none;">联系我们</span>
-                        <span class="ja" style="display: none;">お問い合わせ</span>
-                        <span class="ko" style="display: none;">문의하기</span>
-                    </a>
-                    <a href="https://ans1lbbb.github.io/stickers/privacy.html" class="privacy-link" target="_blank">
-                        <i class="fas fa-shield-alt"></i>
-                        <span class="en" style="display: none;">Privacy Policy</span>
-                        <span class="zh-tw">隱私權政策</span>
-                        <span class="zh-cn" style="display: none;">隐私权政策</span>
-                        <span class="ja" style="display: none;">プライバシーポリシー</span>
-                        <span class="ko" style="display: none;">개인정보 보호정책</span>
-                    </a>
+                    <a href="#" class="contact-link" id="contact-link"><i class="fas fa-envelope"></i><span data-key="contact">聯絡我們</span></a>
+                    <a href="https://ans1lbbb.github.io/stickers/privacy.html" class="privacy-link" target="_blank"><i class="fas fa-shield-alt"></i><span data-key="privacy">隱私權政策</span></a>
                 </div>
-                
-                <div class="copyright"><span>ⓒ</span> 2025 Ans1lStickers. All rights reserved.</div>
+                <div class="copyright"><span>ⓒ</span> 2025-2026 Ans1lStickers. All rights reserved.</div>
             </div>
         </div>
     </footer>
 
-    <!-- Sidebar Navigation -->
+    <!-- 側邊欄完整收錄所有貼圖＆應用連結 -->
     <div class="sidebar" id="sidebar">
-        <button class="sidebar-close" id="sidebar-close">
-            <i class="fas fa-times"></i>
-        </button>
-        <h3 class="sidebar-title en" style="display: none;">Our Stickers & Apps</h3>
-        <h3 class="sidebar-title zh-tw">我們的貼圖與應用</h3>
-        <h3 class="sidebar-title zh-cn" style="display: none;">我们的贴图与应用</h3>
-        <h3 class="sidebar-title ja" style="display: none;">私たちのステッカーとアプリ</h3>
-        <h3 class="sidebar-title ko" style="display: none;">저희 스티커와 앱</h3>
+        <button class="sidebar-close" id="sidebar-close"><i class="fas fa-times"></i></button>
+        <h3 style="color:white; text-align:center; margin-bottom:30px;">📱 所有貼圖與應用</h3>
         <div class="sidebar-apps">
+            <a href="https://apps.apple.com/app/id6761126835" class="sidebar-app" target="_blank">
+                <img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/9c1ac881f76060e4d02daa2987ac8adb52d07a80/shiba_web_icon.png">
+                <div><h4>🔥 台客柴 · 江湖日常</h4><p>俗擱有力篇</p></div>
+            </a>
             <a href="https://apps.apple.com/app/id6755613138" class="sidebar-app" target="_blank">
-                <img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-1%20app%20icon.png" alt="MeowCAT-1: Office Paws">
-                <div class="sidebar-app-info">
-                    <h4 class="en" style="display: none;">MeowCAT-1: Office Paws</h4>
-                    <h4 class="zh-tw">MeowCAT-1: 辦公室貓爪</h4>
-                    <h4 class="zh-cn" style="display: none;">MeowCAT-1: 办公室猫爪</h4>
-                    <h4 class="ja" style="display: none;">MeowCAT-1: オフィスネコ</h4>
-                    <h4 class="ko" style="display: none;">MeowCAT-1: 사무실 고양이</h4>
-                    <p class="en" style="display: none;">Your Daily Dose of Cuteness</p>
-                    <p class="zh-tw">你的每日可愛劑量</p>
-                    <p class="zh-cn" style="display: none;">你的每日可爱剂量</p>
-                    <p class="ja" style="display: none;">あなたの毎日の可愛さの摂取量</p>
-                    <p class="ko" style="display: none;">당신의 매일 매력 복용량</p>
-                </div>
+                <img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-1%20app%20icon.png">
+                <div><h4>MeowCAT-1: 辦公室貓爪</h4><p>你的每日可愛劑量</p></div>
             </a>
             <a href="https://apps.apple.com/app/id6755665538" class="sidebar-app" target="_blank">
-                <img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-2%20app%20icon.png" alt="MeowCAT-2: Corporate Meltdown">
-                <div class="sidebar-app-info">
-                    <h4 class="en" style="display: none;">MeowCAT-2: Corporate Meltdown</h4>
-                    <h4 class="zh-tw">MeowCAT-2: 職場崩潰日記</h4>
-                    <h4 class="zh-cn" style="display: none;">MeowCAT-2: 职场崩溃日记</h4>
-                    <h4 class="ja" style="display: none;">MeowCAT-2: 社畜のメンタル爆破</h4>
-                    <h4 class="ko" style="display: none;">MeowCAT-2: 회사 괴롭힘 실태</h4>
-                    <p class="en" style="display: none;">Sassy & Stressed-out</p>
-                    <p class="zh-tw">囂張不改，崩潰常來</p>
-                    <p class="zh-cn" style="display: none;">嚣张不改，崩溃常来</p>
-                    <p class="ja" style="display: none;">ツンデレ&脳筋破裂</p>
-                    <p class="ko" style="display: none;">삐졌음 스트레스 폭발함</p>
-                </div>
+                <img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-2%20app%20icon.png">
+                <div><h4>MeowCAT-2: 職場崩潰日記</h4><p>囂張不改，崩潰常來</p></div>
             </a>
             <a href="https://apps.apple.com/app/id6755676294" class="sidebar-app" target="_blank">
-                <img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-3%20app%20icon.png" alt="MeowCAT-3: Cubicle Tails">
-                <div class="sidebar-app-info">
-                    <h4 class="en" style="display: none;">MeowCAT-3: Cubicle Tails</h4>
-                    <h4 class="zh-tw">MeowCAT-3: 隔間喵趣</h4>
-                    <h4 class="zh-cn" style="display: none;">MeowCAT-3: 隔间喵趣</h4>
-                    <h4 class="ja" style="display: none;">MeowCAT-3: 業務にゃん</h4>
-                    <h4 class="ko" style="display: none;">MeowCAT-3: 사무실 야옹이</h4>
-                    <p class="en" style="display: none;">Say It with a Meow</p>
-                    <p class="zh-tw">用一聲喵，說一切</p>
-                    <p class="zh-cn" style="display: none;">用一声喵，说一切</p>
-                    <p class="ja" style="display: none;">鳴き声で、伝えよう</p>
-                    <p class="ko" style="display: none;">야옹으로 전해요</p>
-                </div>
+                <img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-3%20app%20icon.png">
+                <div><h4>MeowCAT-3: 隔間喵趣</h4><p>用一聲喵，說一切</p></div>
             </a>
             <a href="https://apps.apple.com/app/id6745821288" class="sidebar-app" target="_blank">
-                <img src="https://raw.githubusercontent.com/Ans1lBBB/AIOS/main/AIOS_icon.png" alt="AIOS Realm">
-                <div class="sidebar-app-info">
-                    <h4 class="en" style="display: none;">AIOS Realm</h4>
-                    <h4 class="zh-tw">艾奧斯</h4>
-                    <h4 class="zh-cn" style="display: none;">艾奥斯</h4>
-                    <h4 class="ja" style="display: none;">AIOS Realm</h4>
-                    <h4 class="ko" style="display: none;">AIOS Realm</h4>
-                    <p class="en" style="display: none;">Ocean goddess adventure</p>
-                    <p class="zh-tw">海洋女神冒險</p>
-                    <p class="zh-cn" style="display: none;">海洋女神冒险</p>
-                    <p class="ja" style="display: none;">海洋の女神の冒険</p>
-                    <p class="ko" style="display: none;">바다 여신 모험</p>
-                </div>
+                <img src="https://raw.githubusercontent.com/Ans1lBBB/AIOS/main/AIOS_icon.png">
+                <div><h4>艾奧斯 AIOS Realm</h4><p>海洋女神冒險</p></div>
             </a>
             <a href="https://apps.apple.com/app/id6740332215" class="sidebar-app" target="_blank">
-                <img src="https://raw.githubusercontent.com/Ans1lBBB/ProfitFairy/main/ProfitFairy_icon.png" alt="ProfitFairy">
-                <div class="sidebar-app-info">
-                    <h4 class="en" style="display: none;">ProfitFairy</h4>
-                    <h4 class="zh-tw">利潤精算師</h4>
-                    <h4 class="zh-cn" style="display: none;">利润精算师</h4>
-                    <h4 class="ja" style="display: none;">ProfitFairy</h4>
-                    <h4 class="ko" style="display: none;">ProfitFairy</h4>
-                    <p class="en" style="display: none;">E-commerce calculator</p>
-                    <p class="zh-tw">電商計算器</p>
-                    <p class="zh-cn" style="display: none;">电商计算器</p>
-                    <p class="ja" style="display: none;">Eコマース計算機</p>
-                    <p class="ko" style="display: none;">전자상거래 계산기</p>
-                </div>
+                <img src="https://raw.githubusercontent.com/Ans1lBBB/ProfitFairy/main/ProfitFairy_icon.png">
+                <div><h4>利潤精算師 ProfitFairy</h4><p>電商利潤神器</p></div>
             </a>
             <a href="https://apps.apple.com/app/id6752606069" class="sidebar-app" target="_blank">
-                <img src="https://raw.githubusercontent.com/Ans1lBBB/RubyDays/main/RubyDays_icon.png" alt="RubyDays">
-                <div class="sidebar-app-info">
-                    <h4 class="en" style="display: none;">RubyDays</h4>
-                    <h4 class="zh-tw">小主日記</h4>
-                    <h4 class="zh-cn" style="display: none;">小主日记</h4>
-                    <h4 class="ja" style="display: none;">RubyDays</h4>
-                    <h4 class="ko" style="display: none;">RubyDays</h4>
-                    <p class="en" style="display: none;">Period tracker</p>
-                    <p class="zh-tw">生理期追蹤</p>
-                    <p class="zh-cn" style="display: none;">生理期追踪</p>
-                    <p class="ja" style="display: none;">生理周期トラッカー</p>
-                    <p class="ko" style="display: none;">생리 주기 추적기</p>
-                </div>
+                <img src="https://raw.githubusercontent.com/Ans1lBBB/RubyDays/main/RubyDays_icon.png">
+                <div><h4>小主日記 RubyDays</h4><p>經期追蹤智慧助手</p></div>
             </a>
         </div>
     </div>
-
-    <!-- Sidebar Trigger -->
-    <div class="sidebar-trigger" id="sidebar-trigger">
-        <i class="fas fa-th-large"></i>
-    </div>
+    <div class="sidebar-trigger" id="sidebar-trigger"><i class="fas fa-th-large"></i></div>
 
     <script>
-        // Language switching functionality
-        function switchLanguage(lang) {
-            // Update active button
-            document.getElementById('en-btn').classList.toggle('active', lang === 'en');
-            document.getElementById('zh-tw-btn').classList.toggle('active', lang === 'zh-tw');
-            document.getElementById('zh-cn-btn').classList.toggle('active', lang === 'zh-cn');
-            document.getElementById('ja-btn').classList.toggle('active', lang === 'ja');
-            document.getElementById('ko-btn').classList.toggle('active', lang === 'ko');
-            
-            document.getElementById('mobile-en-btn').classList.toggle('active', lang === 'en');
-            document.getElementById('mobile-zh-tw-btn').classList.toggle('active', lang === 'zh-tw');
-            document.getElementById('mobile-zh-cn-btn').classList.toggle('active', lang === 'zh-cn');
-            document.getElementById('mobile-ja-btn').classList.toggle('active', lang === 'ja');
-            document.getElementById('mobile-ko-btn').classList.toggle('active', lang === 'ko');
-            
-            // Show/hide language-specific elements
-            const enElements = document.querySelectorAll('.en');
-            const zhTwElements = document.querySelectorAll('.zh-tw');
-            const zhCnElements = document.querySelectorAll('.zh-cn');
-            const jaElements = document.querySelectorAll('.ja');
-            const koElements = document.querySelectorAll('.ko');
-            
-            if (lang === 'en') {
-                enElements.forEach(el => el.style.display = '');
-                zhTwElements.forEach(el => el.style.display = 'none');
-                zhCnElements.forEach(el => el.style.display = 'none');
-                jaElements.forEach(el => el.style.display = 'none');
-                koElements.forEach(el => el.style.display = 'none');
-            } else if (lang === 'zh-tw') {
-                enElements.forEach(el => el.style.display = 'none');
-                zhTwElements.forEach(el => el.style.display = '');
-                zhCnElements.forEach(el => el.style.display = 'none');
-                jaElements.forEach(el => el.style.display = 'none');
-                koElements.forEach(el => el.style.display = 'none');
-            } else if (lang === 'zh-cn') {
-                enElements.forEach(el => el.style.display = 'none');
-                zhTwElements.forEach(el => el.style.display = 'none');
-                zhCnElements.forEach(el => el.style.display = '');
-                jaElements.forEach(el => el.style.display = 'none');
-                koElements.forEach(el => el.style.display = 'none');
-            } else if (lang === 'ja') {
-                enElements.forEach(el => el.style.display = 'none');
-                zhTwElements.forEach(el => el.style.display = 'none');
-                zhCnElements.forEach(el => el.style.display = 'none');
-                jaElements.forEach(el => el.style.display = '');
-                koElements.forEach(el => el.style.display = 'none');
-            } else {
-                enElements.forEach(el => el.style.display = 'none');
-                zhTwElements.forEach(el => el.style.display = 'none');
-                zhCnElements.forEach(el => el.style.display = 'none');
-                jaElements.forEach(el => el.style.display = 'none');
-                koElements.forEach(el => el.style.display = '');
+        const translations = {
+            "zh-TW": {
+                nav_stickers:"貼圖", nav_apps:"應用", nav_faq:"常見問題",
+                hero_title:"【台客柴】俗擱有力 · 霸氣登場", hero_desc:"藍白拖＋復古安全帽＋超派口頭禪，正港台灣味貼圖，嗆翻聊天室！",
+                stickers_title:"🔥 全新貼圖 · 台客柴江湖篇",
+                taiger_name:"【台客柴】阿柴的江湖日常：俗擱有力篇", taiger_sub:"藍白拖＋復古安全帽配上超派口頭禪，看起來很兇，其實超北爛。",
+                taiger_desc1:"<strong>聊天沒話題？那是因為你少了一隻「台客柴」！</strong><br>當阿柴穿上台味套裝，連走路都自帶風。本系列收錄江湖必備的吐槽神句與爆笑表情，專門對付已讀不回、需要被狠嗆的朋友。",
+                taiger_desc2:"從經典復古造型到台式幽默，阿柴外表狠勁十足，內心北爛無極限。快讓阿柴加入你的聊天戰場，台到沒朋友、台出新高度！",
+                taiger_desc3:"<strong>正港台式靈魂「阿柴」霸氣登場！</strong>藍白拖、復古安全帽，完美還原台灣江湖日常。超派口頭禪＋北爛眼神，俗擱有力100%，兄弟們，收圖啦！",
+                pack1_title:"MeowCAT-1: 辦公室貓爪", pack1_sub:"你的每日可愛劑量", pack1_desc:"踏入辦公室日常！冒雨通勤、KPI奮戰，每個瞬間變得可愛又共鳴。",
+                pack2_title:"MeowCAT-2: 職場崩潰日記", pack2_sub:"囂張不改，崩潰常來", pack2_desc:"收件箱九頭蛇、老闆緊急要求，辦公貓魂壓力山大超派，嗆辣態度陪你度過。",
+                pack3_title:"MeowCAT-3: 隔間喵趣", pack3_sub:"用一聲喵，說一切", pack3_desc:"無限會議、鍵盤旁睏倦小貓，肉球擊掌慶祝成功，毛茸茸夥伴療癒日常。",
+                apps_title:"Ans1l 生態系應用", aios_name:"艾奧斯", aios_desc:"海洋女神解謎冒險", profit_name:"利潤精算師", profit_desc:"電商成本利潤計算神器", ruby_name:"小主日記", ruby_desc:"中醫智慧生理期追蹤",
+                how_title:"使用說明", step1_title:"在App Store中尋找", step1_desc:"搜尋「台客柴」或「MeowCAT」", step2_title:"下載貼圖包", step2_desc:"點擊取得並安裝至iMessage", step3_title:"打開iMessage", step3_desc:"啟動訊息，選擇對話", step4_title:"傳送與享受", step4_desc:"點擊App Store圖示，選取貼圖發送",
+                faq_title:"常見問題", faq1_q:"台客柴跟MeowCAT有什麼不同？", faq1_a:"台客柴是全新獨立系列！以台灣在地江湖味、藍白拖、超派口頭禪為主，風格更嗆更北爛。", faq2_q:"哪裡下載台客柴貼圖？", faq2_a:"點擊上方「台客柴」卡片中的App Store按鈕即可下載。", faq3_q:"貼圖支援哪些裝置？", faq3_a:"所有iOS / iPadOS裝置，iMessage相容。",
+                contact:"聯絡我們", privacy:"隱私權政策"
+            },
+            "EN": {
+                nav_stickers:"Stickers", nav_apps:"Apps", nav_faq:"FAQ",
+                hero_title:"Taiger · Ultra Local Shiba", hero_desc:"Blue slippers + retro helmet + super gangster phrases, authentic Taiwanese stickers!",
+                stickers_title:"🔥 New Release · Taiger Jianghu Edition",
+                taiger_name:"Taiger Shiba: Jianghu Daily", taiger_sub:"Blue slippers + retro helmet + tough catchphrases, looks fierce but hilarious.",
+                taiger_desc1:"<strong>No chat topic? You're missing 'Taiger Shiba'!</strong><br>With Taiwanese outfit, Shiba brings attitude. Must-have roasts & funny expressions for left-on-read moments.",
+                taiger_desc2:"From retro looks to Taiwanese humor, Shiba looks tough but silly inside. Join the chat battlefield and reach new Taiwanese cool!",
+                taiger_desc3:"<strong>Genuine Taiwanese 'A-Chai' makes domineering debut!</strong> Blue slippers & retro helmet, perfectly recreating Taiwan daily life. Super gangster phrases + silly looks, 100% down-to-earth!",
+                pack1_title:"MeowCAT-1: Office Paws", pack1_sub:"Daily Cuteness", pack1_desc:"Step into office chaos! Rainy commutes, KPI battles – cute & relatable.",
+                pack2_title:"MeowCAT-2: Corporate Meltdown", pack2_sub:"Sassy & Stressed", pack2_desc:"Inbox hydra, urgent boss requests – sassy office cat attitude.",
+                pack3_title:"MeowCAT-3: Cubicle Tails", pack3_sub:"Say It with a Meow", pack3_desc:"Endless meetings, sleepy kitten, paw-bump to celebrate success.",
+                apps_title:"Other Apps by Ans1l", aios_name:"AIOS Realm", aios_desc:"Ocean goddess puzzle", profit_name:"ProfitFairy", profit_desc:"E-commerce profit tool", ruby_name:"RubyDays", ruby_desc:"Period tracker with TCM",
+                how_title:"How to Use", step1_title:"Find in App Store", step1_desc:"Search 'Taiger' or 'MeowCAT'", step2_title:"Download", step2_desc:"Tap get & install to iMessage", step3_title:"Open iMessage", step3_desc:"Launch Messages", step4_title:"Send & Enjoy", step4_desc:"Tap App Store icon & select stickers",
+                faq_title:"FAQ", faq1_q:"Difference between Taiger & MeowCAT?", faq1_a:"Taiger is new series with Taiwanese street style, blue slippers, super gangster phrases.", faq2_q:"Where to download Taiger?", faq2_a:"Click the App Store badge in Taiger card above.", faq3_q:"Compatible devices?", faq3_a:"All iOS/iPadOS devices, iMessage compatible.",
+                contact:"Contact Us", privacy:"Privacy Policy"
             }
+        };
+        let currentLang = "zh-TW";
+        function updateLanguage(lang) {
+            currentLang = lang;
+            const dict = translations[lang];
+            document.querySelectorAll("[data-key]").forEach(el => {
+                const key = el.getAttribute("data-key");
+                if(dict[key]) {
+                    if(el.classList && el.classList.contains("faq-answer")) el.innerHTML = dict[key];
+                    else if(el.tagName === "H1" || el.tagName === "P" || el.tagName === "H3" || el.tagName === "H2") el.innerHTML = dict[key];
+                    else el.innerText = dict[key];
+                }
+            });
+            document.querySelectorAll(".global-lang-btn, .mobile-lang-btn").forEach(btn => {
+                if(btn.getAttribute("data-lang") === lang) btn.classList.add("active");
+                else btn.classList.remove("active");
+            });
         }
-        
-        document.getElementById('en-btn').addEventListener('click', function() {
-            switchLanguage('en');
+        document.querySelectorAll(".global-lang-btn, .mobile-lang-btn").forEach(btn => {
+            btn.addEventListener("click", () => updateLanguage(btn.getAttribute("data-lang")));
         });
-        
-        document.getElementById('zh-tw-btn').addEventListener('click', function() {
-            switchLanguage('zh-tw');
-        });
-        
-        document.getElementById('zh-cn-btn').addEventListener('click', function() {
-            switchLanguage('zh-cn');
-        });
-        
-        document.getElementById('ja-btn').addEventListener('click', function() {
-            switchLanguage('ja');
-        });
-        
-        document.getElementById('ko-btn').addEventListener('click', function() {
-            switchLanguage('ko');
-        });
-        
-        document.getElementById('mobile-en-btn').addEventListener('click', function() {
-            switchLanguage('en');
-            document.getElementById('mobile-menu').classList.remove('active');
-        });
-        
-        document.getElementById('mobile-zh-tw-btn').addEventListener('click', function() {
-            switchLanguage('zh-tw');
-            document.getElementById('mobile-menu').classList.remove('active');
-        });
-        
-        document.getElementById('mobile-zh-cn-btn').addEventListener('click', function() {
-            switchLanguage('zh-cn');
-            document.getElementById('mobile-menu').classList.remove('active');
-        });
-        
-        document.getElementById('mobile-ja-btn').addEventListener('click', function() {
-            switchLanguage('ja');
-            document.getElementById('mobile-menu').classList.remove('active');
-        });
-        
-        document.getElementById('mobile-ko-btn').addEventListener('click', function() {
-            switchLanguage('ko');
-            document.getElementById('mobile-menu').classList.remove('active');
-        });
-        
-        // Contact email protection
-        document.getElementById('contact-link').addEventListener('click', function(e) {
-            e.preventDefault();
-            const email = 'ans1l' + '@' + 'icloud.com';
-            window.location.href = 'mailto:' + email;
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                }
-                
-                // Close mobile menu after clicking a link
-                document.getElementById('mobile-menu').classList.remove('active');
-            });
-        });
-        
-        // FAQ accordion functionality
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', function() {
-                const item = this.parentElement;
-                item.classList.toggle('active');
-            });
-        });
-        
-        // Sidebar functionality
-        document.getElementById('sidebar-trigger').addEventListener('click', function() {
-            document.getElementById('sidebar').classList.add('active');
-        });
-        
-        document.getElementById('sidebar-close').addEventListener('click', function() {
-            document.getElementById('sidebar').classList.remove('active');
-        });
-        
-        // Mobile menu functionality
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.add('active');
-        });
-        
-        document.getElementById('mobile-menu-close').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.remove('active');
-        });
-        
-        // Add subtle animation to elements on scroll
-        window.addEventListener('scroll', function() {
-            const elements = document.querySelectorAll('.sticker-pack, .step, .app-card');
-            elements.forEach(el => {
-                const position = el.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.2;
-                
-                if (position < screenPosition) {
-                    el.style.opacity = '1';
-                    el.style.transform = 'translateY(0)';
-                }
-            });
-        });
-        
-        // Initialize elements with initial styles for animation
-        document.addEventListener('DOMContentLoaded', function() {
-            const elements = document.querySelectorAll('.sticker-pack, .step, .app-card');
-            elements.forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(20px)';
-                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            });
-            
-            // Trigger the animation after a short delay
-            setTimeout(function() {
-                window.dispatchEvent(new Event('scroll'));
-            }, 100);
-        });
+        updateLanguage("zh-TW");
+        document.getElementById('contact-link').addEventListener('click',(e)=>{e.preventDefault(); window.location.href='mailto:ans1l@icloud.com';});
+        document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){e.preventDefault();const target=document.querySelector(this.getAttribute('href'));if(target) window.scrollTo({top:target.offsetTop-100,behavior:'smooth'});document.getElementById('mobile-menu').classList.remove('active');});});
+        document.querySelectorAll('.faq-question').forEach(q=>{q.addEventListener('click',function(){this.parentElement.classList.toggle('active');});});
+        document.getElementById('sidebar-trigger').onclick = ()=>document.getElementById('sidebar').classList.add('active');
+        document.getElementById('sidebar-close').onclick = ()=>document.getElementById('sidebar').classList.remove('active');
+        document.getElementById('mobile-menu-btn').onclick = ()=>document.getElementById('mobile-menu').classList.add('active');
+        document.getElementById('mobile-menu-close').onclick = ()=>document.getElementById('mobile-menu').classList.remove('active');
     </script>
 </body>
 </html>
