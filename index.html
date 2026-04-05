@@ -75,18 +75,9 @@
             -webkit-text-fill-color: transparent;
         }
         
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--dark);
-            cursor: pointer;
-        }
-        
         .nav-links {
             display: flex;
-            gap: 25px;
+            gap: 32px;
         }
         
         .nav-links a {
@@ -94,17 +85,19 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
+            font-size: 1rem;
         }
         
         .nav-links a:hover {
             color: var(--primary-green);
         }
         
+        /* 語言切換器 - 直接顯示在右上角 */
         .lang-switch-wrapper {
             display: flex;
-            gap: 12px;
-            background: rgba(39, 174, 96, 0.1);
-            padding: 5px 12px;
+            gap: 8px;
+            background: rgba(39, 174, 96, 0.12);
+            padding: 4px 8px;
             border-radius: 40px;
             border: 1px solid rgba(39,174,96,0.3);
         }
@@ -113,125 +106,167 @@
             background: transparent;
             border: none;
             font-weight: 600;
-            font-size: 0.9rem;
-            padding: 6px 14px;
+            font-size: 0.85rem;
+            padding: 6px 16px;
             border-radius: 30px;
             cursor: pointer;
             transition: all 0.2s;
             color: var(--dark);
+            font-family: inherit;
         }
         
         .global-lang-btn.active {
             background: var(--primary-green);
             color: white;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
         
+        .global-lang-btn:not(.active):hover {
+            background: var(--light-green);
+            color: #1e4620;
+        }
+        
+        /* Hero */
         .hero {
-            padding: 150px 0 80px;
+            padding: 140px 0 70px;
             text-align: center;
             background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%);
         }
         
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-size: 2.6rem;
+            margin-bottom: 18px;
             font-weight: 700;
             color: var(--white);
+            letter-spacing: -0.3px;
         }
         
         .hero p {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 600px;
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.92);
+            max-width: 650px;
             margin: 0 auto;
+        }
+        
+        /* 通用區塊間距優化 */
+        .section {
+            padding: 70px 0;
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 50px;
-            font-size: 2rem;
+            margin-bottom: 45px;
+            font-size: 2.1rem;
             font-weight: 700;
             position: relative;
             color: var(--dark-green);
+            letter-spacing: -0.2px;
         }
         
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -15px;
+            bottom: -14px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
+            width: 70px;
+            height: 3px;
             background: linear-gradient(90deg, var(--primary-green), var(--light-green));
-            border-radius: 2px;
+            border-radius: 3px;
+        }
+        
+        .about, .stickers, .apps, .how-to-use, .faq {
+            padding: 70px 0;
+        }
+        
+        .about {
+            background: var(--white);
+        }
+        
+        .stickers {
+            background: var(--light-gray);
+        }
+        
+        .apps {
+            background: var(--white);
+        }
+        
+        .how-to-use {
+            background: var(--light-gray);
+        }
+        
+        .faq {
+            background: var(--white);
         }
         
         .sticker-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 25px;
+            gap: 30px;
         }
         
         .sticker-pack {
             background: var(--white);
-            border-radius: 20px;
+            border-radius: 24px;
             overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
         }
         
         .sticker-pack:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
         }
         
         .sticker-preview {
-            padding: 30px;
+            padding: 28px;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 180px;
+            height: 170px;
             background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%);
         }
         
         .sticker-preview img {
-            height: 120px;
+            height: 115px;
             object-fit: contain;
             border-radius: 20px;
         }
         
         .sticker-info {
-            padding: 20px;
-            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 22px 24px 26px;
         }
         
         .sticker-info h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
+            font-size: 1.35rem;
+            margin-bottom: 8px;
+            font-weight: 700;
         }
         
         .sticker-info p {
             color: var(--gray);
-            margin-bottom: 15px;
-            font-size: 0.9rem;
+            margin-bottom: 14px;
+            font-size: 0.92rem;
+            line-height: 1.5;
         }
         
         .sticker-subtitle {
             color: var(--primary-green);
             font-style: italic;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+            font-weight: 500;
+            font-size: 0.9rem;
         }
         
         .app-store-badge {
             display: inline-block;
-            margin-top: 10px;
+            margin-top: 12px;
         }
         
         .app-store-badge img {
-            height: 35px;
+            height: 38px;
             border-radius: 8px;
+            transition: transform 0.2s;
         }
         
         .taiger-highlight {
@@ -244,8 +279,8 @@
         .taiger-highlight::before {
             content: "🔥 NEW 🔥";
             position: absolute;
-            top: 12px;
-            right: -30px;
+            top: 14px;
+            right: -28px;
             background: var(--taiger-red);
             color: gold;
             font-size: 0.7rem;
@@ -253,6 +288,8 @@
             padding: 4px 35px;
             transform: rotate(45deg);
             z-index: 2;
+            letter-spacing: 1px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.2);
         }
         
         .taiger-preview {
@@ -261,87 +298,100 @@
         
         .taiger-title {
             color: var(--taiger-red) !important;
-            font-weight: 800;
         }
         
         .apps-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 25px;
+            gap: 28px;
         }
         
         .app-card {
             background: var(--white);
-            border-radius: 20px;
+            border-radius: 24px;
             overflow: hidden;
             transition: transform 0.3s;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
         }
         
         .app-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-6px);
         }
         
         .app-preview {
-            padding: 25px;
+            padding: 24px;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 150px;
+            height: 140px;
             background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%);
         }
         
         .app-preview img {
-            height: 100px;
+            height: 90px;
             object-fit: contain;
-            border-radius: 20px;
+            border-radius: 18px;
         }
         
         .app-info {
-            padding: 20px;
+            padding: 20px 24px 24px;
+        }
+        
+        .app-info h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
         }
         
         .steps {
             display: grid;
             grid-template-columns: 1fr;
             gap: 25px;
+            margin-top: 10px;
         }
         
         .step {
             text-align: center;
-            padding: 30px 20px;
+            padding: 28px 20px;
             background: var(--white);
-            border-radius: 20px;
+            border-radius: 24px;
+            transition: transform 0.2s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
         }
         
         .step-icon {
             width: 60px;
             height: 60px;
-            margin: 0 auto 20px;
+            margin: 0 auto 18px;
             background: var(--primary-green);
-            border-radius: 50%;
+            border-radius: 60px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+        
+        .step h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            font-weight: 600;
         }
         
         .faq-container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto 0;
         }
         
         .faq-item {
-            margin-bottom: 15px;
-            border-radius: 10px;
+            margin-bottom: 16px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.05);
         }
         
         .faq-question {
-            padding: 15px;
+            padding: 18px 22px;
             background: var(--light-gray);
             cursor: pointer;
             display: flex;
@@ -349,38 +399,42 @@
             align-items: center;
             font-weight: 600;
             color: var(--dark-green);
+            font-size: 1rem;
         }
         
         .faq-answer {
-            padding: 0 15px;
+            padding: 0 22px;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s;
+            transition: max-height 0.3s ease, padding 0.2s;
             color: var(--gray);
+            font-size: 0.92rem;
+            line-height: 1.5;
         }
         
         .faq-item.active .faq-answer {
-            padding: 15px;
-            max-height: 500px;
+            padding: 18px 22px;
+            max-height: 300px;
         }
         
         footer {
-            padding: 60px 0 30px;
+            padding: 55px 0 35px;
             background: var(--dark-green);
             color: var(--white);
+            margin-top: 10px;
         }
         
         .footer-content {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 30px;
+            gap: 28px;
         }
         
         .contact-info {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 14px;
             align-items: center;
         }
         
@@ -390,6 +444,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            font-size: 0.95rem;
         }
         
         .privacy-link {
@@ -397,11 +452,13 @@
         }
         
         .copyright {
-            margin-top: 30px;
+            margin-top: 20px;
             color: var(--light-green);
             font-size: 0.8rem;
+            text-align: center;
         }
         
+        /* 側邊欄樣式保留原本所有連結 */
         .sidebar {
             position: fixed;
             top: 0;
@@ -410,8 +467,8 @@
             height: 100vh;
             background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%);
             z-index: 2000;
-            transition: right 0.4s;
-            padding: 80px 25px 25px;
+            transition: right 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            padding: 80px 25px 30px;
             overflow-y: auto;
         }
         
@@ -421,8 +478,8 @@
         
         .sidebar-close {
             position: absolute;
-            top: 25px;
-            right: 25px;
+            top: 20px;
+            right: 22px;
             background: none;
             border: none;
             font-size: 2rem;
@@ -433,103 +490,103 @@
         .sidebar-apps {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 18px;
         }
         
         .sidebar-app {
             display: flex;
             align-items: center;
-            gap: 20px;
-            padding: 20px;
-            border-radius: 15px;
+            gap: 18px;
+            padding: 18px;
+            border-radius: 20px;
             background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(8px);
             text-decoration: none;
             color: white;
-            transition: all 0.3s;
+            transition: all 0.25s;
         }
         
         .sidebar-app:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateX(-10px);
+            background: rgba(255, 255, 255, 0.28);
+            transform: translateX(-6px);
         }
         
         .sidebar-app img {
-            width: 70px;
-            height: 70px;
-            border-radius: 15px;
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
             object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
         .sidebar-trigger {
             position: fixed;
-            bottom: 30px;
-            right: 20px;
+            bottom: 28px;
+            right: 22px;
             background: var(--primary-green);
             color: white;
-            width: 70px;
-            height: 70px;
+            width: 64px;
+            height: 64px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            z-index: 100;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            font-size: 1.5rem;
+            z-index: 99;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s;
+            font-size: 1.6rem;
         }
         
-        .mobile-menu {
-            position: fixed;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100vh;
-            background: white;
-            z-index: 2000;
-            transition: left 0.4s;
-            padding: 80px 25px 25px;
+        .sidebar-trigger:hover {
+            background: var(--dark-green);
+            transform: scale(1.05);
         }
         
-        .mobile-menu.active {
-            left: 0;
-        }
-        
-        .mobile-menu-close {
-            position: absolute;
-            top: 25px;
-            right: 25px;
-            background: none;
-            border: none;
-            font-size: 2rem;
-            cursor: pointer;
-        }
-        
-        .mobile-menu-links {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-        
-        .mobile-menu-links a {
-            color: var(--dark);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.2rem;
-        }
-        
+        /* 響應式 */
         @media (min-width: 768px) {
-            .sticker-grid, .apps-grid { grid-template-columns: repeat(2, 1fr); }
-            .steps { grid-template-columns: repeat(4, 1fr); }
-            .sidebar { width: 350px; right: -350px; }
+            .sticker-grid, .apps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .steps {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+            .sidebar {
+                width: 360px;
+                right: -360px;
+            }
+            .hero h1 {
+                font-size: 3rem;
+            }
         }
+        
         @media (min-width: 1024px) {
-            .sticker-grid, .apps-grid { grid-template-columns: repeat(3, 1fr); }
-            .mobile-menu-btn { display: none; }
+            .sticker-grid, .apps-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
+        
         @media (max-width: 767px) {
-            .nav-links, .lang-switch-wrapper { display: none; }
-            .mobile-menu-btn { display: block; }
+            .nav-links {
+                display: none;
+            }
+            .lang-switch-wrapper {
+                margin-left: auto;
+            }
+            .hero {
+                padding: 120px 0 55px;
+            }
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            .section-title {
+                font-size: 1.7rem;
+                margin-bottom: 35px;
+            }
+            .about, .stickers, .apps, .how-to-use, .faq {
+                padding: 55px 0;
+            }
         }
     </style>
 </head>
@@ -543,43 +600,28 @@
                     <a href="#apps" data-key="nav_apps">應用</a>
                     <a href="#faq" data-key="nav_faq">常見問題</a>
                 </nav>
+                <!-- 語言切換直接外顯，沒有三條槓 -->
                 <div class="lang-switch-wrapper" id="globalLangSwitch">
                     <button class="global-lang-btn active" data-lang="zh-TW">繁中</button>
                     <button class="global-lang-btn" data-lang="EN">EN</button>
                 </div>
-                <button class="mobile-menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
             </div>
         </div>
     </header>
 
-    <div class="mobile-menu" id="mobile-menu">
-        <button class="mobile-menu-close" id="mobile-menu-close"><i class="fas fa-times"></i></button>
-        <div class="mobile-menu-links">
-            <a href="#stickers" data-key="nav_stickers">貼圖</a>
-            <a href="#apps" data-key="nav_apps">應用</a>
-            <a href="#faq" data-key="nav_faq">常見問題</a>
-        </div>
-        <div style="margin-top: 30px; display: flex; gap: 15px;">
-            <button class="mobile-lang-btn" data-lang="zh-TW" style="background:var(--primary-green); color:white; border:none; padding:8px 20px; border-radius:30px;">繁中</button>
-            <button class="mobile-lang-btn" data-lang="EN" style="background:transparent; border:1px solid var(--primary-green); padding:8px 20px; border-radius:30px;">EN</button>
-        </div>
-    </div>
-
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1 data-key="hero_title">【台客柴】俗擱有力 · 霸氣登場</h1>
-                <p data-key="hero_desc">藍白拖＋復古安全帽＋超派口頭禪，正港台灣味貼圖，嗆翻聊天室！</p>
-            </div>
+            <h1 data-key="hero_title">【台客柴】俗擱有力 · 霸氣登場</h1>
+            <p data-key="hero_desc">藍白拖＋復古安全帽＋超派口頭禪，正港台灣味貼圖，嗆翻聊天室！</p>
         </div>
     </section>
 
-    <!-- 貼圖系列 - 台客柴全新貼圖置於最前方 -->
+    <!-- 貼圖區塊：台客柴全新優先 -->
     <section class="stickers" id="stickers">
         <div class="container">
             <h2 class="section-title" data-key="stickers_title">🔥 全新貼圖 · 台客柴江湖篇</h2>
             <div class="sticker-grid">
-                <!-- 台客柴 全新貼圖 (首位) -->
+                <!-- 台客柴 首位 -->
                 <div class="sticker-pack taiger-highlight">
                     <div class="sticker-preview taiger-preview">
                         <img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/9c1ac881f76060e4d02daa2987ac8adb52d07a80/shiba_web_icon.png" alt="台客柴 App Icon">
@@ -598,7 +640,7 @@
                     </div>
                 </div>
                 
-                <!-- MeowCAT 三部曲 原有貼圖 -->
+                <!-- MeowCAT 三部曲 -->
                 <div class="sticker-pack">
                     <div class="sticker-preview"><img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-1%20app%20icon.png" alt="MeowCAT-1"></div>
                     <div class="sticker-info"><h3 data-key="pack1_title">MeowCAT-1: 辦公室貓爪</h3><p class="sticker-subtitle" data-key="pack1_sub">你的每日可愛劑量</p><p data-key="pack1_desc">踏入辦公室日常！冒雨通勤、KPI奮戰，每個瞬間變得可愛又共鳴。</p><div class="app-store-badge"><a href="https://apps.apple.com/app/id6755613138" target="_blank"><img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download"></a></div></div>
@@ -662,39 +704,18 @@
         </div>
     </footer>
 
-    <!-- 側邊欄完整收錄所有貼圖＆應用連結 -->
+    <!-- 側邊欄：完整收錄所有貼圖＆應用（包含台客柴 + MeowCAT三部曲 + 三個App） -->
     <div class="sidebar" id="sidebar">
         <button class="sidebar-close" id="sidebar-close"><i class="fas fa-times"></i></button>
-        <h3 style="color:white; text-align:center; margin-bottom:30px;">📱 所有貼圖與應用</h3>
+        <h3 style="color:white; text-align:center; margin-bottom:30px; font-size:1.6rem;">📦 全系列商品</h3>
         <div class="sidebar-apps">
-            <a href="https://apps.apple.com/app/id6761126835" class="sidebar-app" target="_blank">
-                <img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/9c1ac881f76060e4d02daa2987ac8adb52d07a80/shiba_web_icon.png">
-                <div><h4>🔥 台客柴 · 江湖日常</h4><p>俗擱有力篇</p></div>
-            </a>
-            <a href="https://apps.apple.com/app/id6755613138" class="sidebar-app" target="_blank">
-                <img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-1%20app%20icon.png">
-                <div><h4>MeowCAT-1: 辦公室貓爪</h4><p>你的每日可愛劑量</p></div>
-            </a>
-            <a href="https://apps.apple.com/app/id6755665538" class="sidebar-app" target="_blank">
-                <img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-2%20app%20icon.png">
-                <div><h4>MeowCAT-2: 職場崩潰日記</h4><p>囂張不改，崩潰常來</p></div>
-            </a>
-            <a href="https://apps.apple.com/app/id6755676294" class="sidebar-app" target="_blank">
-                <img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-3%20app%20icon.png">
-                <div><h4>MeowCAT-3: 隔間喵趣</h4><p>用一聲喵，說一切</p></div>
-            </a>
-            <a href="https://apps.apple.com/app/id6745821288" class="sidebar-app" target="_blank">
-                <img src="https://raw.githubusercontent.com/Ans1lBBB/AIOS/main/AIOS_icon.png">
-                <div><h4>艾奧斯 AIOS Realm</h4><p>海洋女神冒險</p></div>
-            </a>
-            <a href="https://apps.apple.com/app/id6740332215" class="sidebar-app" target="_blank">
-                <img src="https://raw.githubusercontent.com/Ans1lBBB/ProfitFairy/main/ProfitFairy_icon.png">
-                <div><h4>利潤精算師 ProfitFairy</h4><p>電商利潤神器</p></div>
-            </a>
-            <a href="https://apps.apple.com/app/id6752606069" class="sidebar-app" target="_blank">
-                <img src="https://raw.githubusercontent.com/Ans1lBBB/RubyDays/main/RubyDays_icon.png">
-                <div><h4>小主日記 RubyDays</h4><p>經期追蹤智慧助手</p></div>
-            </a>
+            <a href="https://apps.apple.com/app/id6761126835" class="sidebar-app" target="_blank"><img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/9c1ac881f76060e4d02daa2987ac8adb52d07a80/shiba_web_icon.png"><div><h4>🔥 台客柴 · 江湖日常</h4><p>俗擱有力篇</p></div></a>
+            <a href="https://apps.apple.com/app/id6755613138" class="sidebar-app" target="_blank"><img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-1%20app%20icon.png"><div><h4>MeowCAT-1: 辦公室貓爪</h4><p>你的每日可愛劑量</p></div></a>
+            <a href="https://apps.apple.com/app/id6755665538" class="sidebar-app" target="_blank"><img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-2%20app%20icon.png"><div><h4>MeowCAT-2: 職場崩潰日記</h4><p>囂張不改</p></div></a>
+            <a href="https://apps.apple.com/app/id6755676294" class="sidebar-app" target="_blank"><img src="https://raw.githubusercontent.com/Ans1lBBB/stickers/main/MeowCAT-3%20app%20icon.png"><div><h4>MeowCAT-3: 隔間喵趣</h4><p>用一聲喵說一切</p></div></a>
+            <a href="https://apps.apple.com/app/id6745821288" class="sidebar-app" target="_blank"><img src="https://raw.githubusercontent.com/Ans1lBBB/AIOS/main/AIOS_icon.png"><div><h4>艾奧斯 AIOS Realm</h4><p>海洋女神冒險</p></div></a>
+            <a href="https://apps.apple.com/app/id6740332215" class="sidebar-app" target="_blank"><img src="https://raw.githubusercontent.com/Ans1lBBB/ProfitFairy/main/ProfitFairy_icon.png"><div><h4>利潤精算師 ProfitFairy</h4><p>電商利潤神器</p></div></a>
+            <a href="https://apps.apple.com/app/id6752606069" class="sidebar-app" target="_blank"><img src="https://raw.githubusercontent.com/Ans1lBBB/RubyDays/main/RubyDays_icon.png"><div><h4>小主日記 RubyDays</h4><p>經期追蹤智慧助手</p></div></a>
         </div>
     </div>
     <div class="sidebar-trigger" id="sidebar-trigger"><i class="fas fa-th-large"></i></div>
@@ -712,7 +733,7 @@
                 pack1_title:"MeowCAT-1: 辦公室貓爪", pack1_sub:"你的每日可愛劑量", pack1_desc:"踏入辦公室日常！冒雨通勤、KPI奮戰，每個瞬間變得可愛又共鳴。",
                 pack2_title:"MeowCAT-2: 職場崩潰日記", pack2_sub:"囂張不改，崩潰常來", pack2_desc:"收件箱九頭蛇、老闆緊急要求，辦公貓魂壓力山大超派，嗆辣態度陪你度過。",
                 pack3_title:"MeowCAT-3: 隔間喵趣", pack3_sub:"用一聲喵，說一切", pack3_desc:"無限會議、鍵盤旁睏倦小貓，肉球擊掌慶祝成功，毛茸茸夥伴療癒日常。",
-                apps_title:"Ans1l 生態系應用", aios_name:"艾奧斯", aios_desc:"海洋女神解謎冒險", profit_name:"利潤精算師", profit_desc:"電商成本利潤計算神器", ruby_name:"小主日記", ruby_desc:"中醫智慧生理期追蹤",
+                apps_title:"Ans1l 生態系應用", aios_name:"艾奧斯", aios_desc:"海洋女神解謎冒險，重建記憶碎片。", profit_name:"利潤精算師", profit_desc:"電商成本利潤計算神器。", ruby_name:"小主日記", ruby_desc:"中醫智慧生理期追蹤，呵護女性。",
                 how_title:"使用說明", step1_title:"在App Store中尋找", step1_desc:"搜尋「台客柴」或「MeowCAT」", step2_title:"下載貼圖包", step2_desc:"點擊取得並安裝至iMessage", step3_title:"打開iMessage", step3_desc:"啟動訊息，選擇對話", step4_title:"傳送與享受", step4_desc:"點擊App Store圖示，選取貼圖發送",
                 faq_title:"常見問題", faq1_q:"台客柴跟MeowCAT有什麼不同？", faq1_a:"台客柴是全新獨立系列！以台灣在地江湖味、藍白拖、超派口頭禪為主，風格更嗆更北爛。", faq2_q:"哪裡下載台客柴貼圖？", faq2_a:"點擊上方「台客柴」卡片中的App Store按鈕即可下載。", faq3_q:"貼圖支援哪些裝置？", faq3_a:"所有iOS / iPadOS裝置，iMessage相容。",
                 contact:"聯絡我們", privacy:"隱私權政策"
@@ -728,8 +749,8 @@
                 pack1_title:"MeowCAT-1: Office Paws", pack1_sub:"Daily Cuteness", pack1_desc:"Step into office chaos! Rainy commutes, KPI battles – cute & relatable.",
                 pack2_title:"MeowCAT-2: Corporate Meltdown", pack2_sub:"Sassy & Stressed", pack2_desc:"Inbox hydra, urgent boss requests – sassy office cat attitude.",
                 pack3_title:"MeowCAT-3: Cubicle Tails", pack3_sub:"Say It with a Meow", pack3_desc:"Endless meetings, sleepy kitten, paw-bump to celebrate success.",
-                apps_title:"Other Apps by Ans1l", aios_name:"AIOS Realm", aios_desc:"Ocean goddess puzzle", profit_name:"ProfitFairy", profit_desc:"E-commerce profit tool", ruby_name:"RubyDays", ruby_desc:"Period tracker with TCM",
-                how_title:"How to Use", step1_title:"Find in App Store", step1_desc:"Search 'Taiger' or 'MeowCAT'", step2_title:"Download", step2_desc:"Tap get & install to iMessage", step3_title:"Open iMessage", step3_desc:"Launch Messages", step4_title:"Send & Enjoy", step4_desc:"Tap App Store icon & select stickers",
+                apps_title:"Other Apps by Ans1l", aios_name:"AIOS Realm", aios_desc:"Ocean goddess puzzle adventure.", profit_name:"ProfitFairy", profit_desc:"E-commerce profit & cost tool.", ruby_name:"RubyDays", ruby_desc:"Period tracker with TCM wisdom.",
+                how_title:"How to Use", step1_title:"Find in App Store", step1_desc:"Search 'Taiger' or 'MeowCAT'", step2_title:"Download Stickers", step2_desc:"Tap get & install to iMessage", step3_title:"Open iMessage", step3_desc:"Launch Messages & start conversation", step4_title:"Send & Enjoy", step4_desc:"Tap App Store icon & select stickers",
                 faq_title:"FAQ", faq1_q:"Difference between Taiger & MeowCAT?", faq1_a:"Taiger is new series with Taiwanese street style, blue slippers, super gangster phrases.", faq2_q:"Where to download Taiger?", faq2_a:"Click the App Store badge in Taiger card above.", faq3_q:"Compatible devices?", faq3_a:"All iOS/iPadOS devices, iMessage compatible.",
                 contact:"Contact Us", privacy:"Privacy Policy"
             }
@@ -746,22 +767,20 @@
                     else el.innerText = dict[key];
                 }
             });
-            document.querySelectorAll(".global-lang-btn, .mobile-lang-btn").forEach(btn => {
+            document.querySelectorAll(".global-lang-btn").forEach(btn => {
                 if(btn.getAttribute("data-lang") === lang) btn.classList.add("active");
                 else btn.classList.remove("active");
             });
         }
-        document.querySelectorAll(".global-lang-btn, .mobile-lang-btn").forEach(btn => {
+        document.querySelectorAll(".global-lang-btn").forEach(btn => {
             btn.addEventListener("click", () => updateLanguage(btn.getAttribute("data-lang")));
         });
         updateLanguage("zh-TW");
         document.getElementById('contact-link').addEventListener('click',(e)=>{e.preventDefault(); window.location.href='mailto:ans1l@icloud.com';});
-        document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){e.preventDefault();const target=document.querySelector(this.getAttribute('href'));if(target) window.scrollTo({top:target.offsetTop-100,behavior:'smooth'});document.getElementById('mobile-menu').classList.remove('active');});});
+        document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){e.preventDefault();const target=document.querySelector(this.getAttribute('href'));if(target) window.scrollTo({top:target.offsetTop-80,behavior:'smooth'});});});
         document.querySelectorAll('.faq-question').forEach(q=>{q.addEventListener('click',function(){this.parentElement.classList.toggle('active');});});
         document.getElementById('sidebar-trigger').onclick = ()=>document.getElementById('sidebar').classList.add('active');
         document.getElementById('sidebar-close').onclick = ()=>document.getElementById('sidebar').classList.remove('active');
-        document.getElementById('mobile-menu-btn').onclick = ()=>document.getElementById('mobile-menu').classList.add('active');
-        document.getElementById('mobile-menu-close').onclick = ()=>document.getElementById('mobile-menu').classList.remove('active');
     </script>
 </body>
 </html>
